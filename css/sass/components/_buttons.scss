@@ -1,0 +1,21 @@
+
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+@keyframes componentHover
+{
+    0% { background-color: $elementsBackColor; color: $elementsFontColor; }
+    100% { background-color: $elementsHoverBackColor; color: $elementsHoverFontColor; }
+}
+
+.button
+{
+    @include buttonStyle($elementsBackColor, $elementsFontColor, $elementsHoverBackColor, $elementsHoverFontColor);
+    &:hover { animation: componentHover 0.8s; }
+}
+
+.select
+{
+    @include selectStyle($elementsBackColor, $elementsFontColor, $elementsHoverBackColor, $elementsHoverFontColor);
+    &:hover { animation: componentHover 0.8s; }
+}

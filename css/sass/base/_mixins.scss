@@ -1,0 +1,64 @@
+
+@use './_vars' as *;
+
+@mixin buttonStyle($backColor, $fontColor, $backColorHover, $fontColorHover)
+{
+    background-color: $backColor;
+    color: $fontColor;
+
+    padding: 1% 2%;
+    margin: 1%;
+    border-radius: 10px;
+    font-weight: normal;
+    cursor: pointer;
+
+    &:hover
+    {
+        background-color: $backColorHover;
+        color: $fontColorHover;
+        font-weight: bold;
+    }
+}
+
+@mixin selectStyle($backColor, $fontColor, $backColorHover, $fontColorHover)
+{
+    background-color: $backColor;
+    color: $fontColor;
+    
+    padding: 1% 2%;
+    margin: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    &:hover
+    {
+        background-color: $backColorHover;
+        color: $fontColorHover;
+        font-weight: bold;
+    }
+
+    &:focus
+    {
+        background-color: $backColorHover;
+        color: $fontColor;
+        font-weight: bold;
+    }
+
+    & option
+    {
+        font-weight: normal;
+
+        &:focus
+        {
+            background-color: $backColorHover;
+            color: $fontColorHover;
+            font-weight: bold;
+        }
+        &:hover
+        {
+            background-color: $backColorHover;
+            color: $fontColorHover;
+            font-weight: bold;
+        }
+    }
+}

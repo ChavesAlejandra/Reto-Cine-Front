@@ -1,0 +1,52 @@
+
+@use '../sass/base/reset' as *;
+@use '../sass/base/vars' as *;
+@use '../sass/base/mixins' as *;
+
+@use '../sass/components/buttons' as *;
+
+@use '../sass/layout/home.scss' as *;
+@use '../sass/layout/category.scss' as *;
+
+img { width: 100%; }
+
+.header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0%;
+    background-color: $headerFooterBackColor;
+    color: $generalFontColor;
+    font-size: $normalFontSizeMobile;
+
+    &__logo { width: 200px; }
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0%;
+    background-color: $headerFooterBackColor;
+    color: $generalFontColor;
+    font-size: $normalFontSizeMobile;
+
+    &__logo { width: 100px; }
+}
+
+article, section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0%;
+    background-color: $bodyBackColor;
+    color: $generalFontColor;
+    font-size: $normalFontSizeMobile;
+}

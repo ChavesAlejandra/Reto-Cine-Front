@@ -1,0 +1,20 @@
+
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+
+.categories
+{
+    &__title
+    {
+        font-size: 40px;
+        margin: 2% 0% 3% 0%;
+    }
+    &__image
+    {
+        width: 95%;
+        margin: 2% 0%;
+        box-shadow: 5px 5px 4px 0px #00000099;
+    }
+}

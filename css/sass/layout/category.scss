@@ -1,0 +1,18 @@
+
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.films
+{
+    &__title
+    {
+        font-size: 40px;
+        margin: 2% 0% 3% 0%;
+    }
+
+    &__container
+    {
+        width: 100%;
+    }
+}

@@ -1,0 +1,139 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  line-height: 1;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@keyframes componentHover {
+  0% {
+    background-color: #951616;
+    color: #F5EFE6;
+  }
+  100% {
+    background-color: #D4A50D;
+    color: #191919;
+  }
+}
+.button {
+  background-color: #951616;
+  color: #F5EFE6;
+  padding: 1% 2%;
+  margin: 1%;
+  border-radius: 10px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #D4A50D;
+  color: #191919;
+  font-weight: bold;
+}
+.button:hover {
+  animation: componentHover 0.8s;
+}
+
+.select {
+  background-color: #951616;
+  color: #F5EFE6;
+  padding: 1% 2%;
+  margin: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.select:hover {
+  background-color: #D4A50D;
+  color: #191919;
+  font-weight: bold;
+}
+.select:focus {
+  background-color: #D4A50D;
+  color: #F5EFE6;
+  font-weight: bold;
+}
+.select option {
+  font-weight: normal;
+}
+.select option:focus {
+  background-color: #D4A50D;
+  color: #191919;
+  font-weight: bold;
+}
+.select option:hover {
+  background-color: #D4A50D;
+  color: #191919;
+  font-weight: bold;
+}
+.select:hover {
+  animation: componentHover 0.8s;
+}
+
+.categories__title {
+  font-size: 40px;
+  margin: 2% 0% 3% 0%;
+}
+.categories__image {
+  width: 95%;
+  margin: 2% 0%;
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.6);
+}
+
+.films__title {
+  font-size: 40px;
+  margin: 2% 0% 3% 0%;
+}
+.films__container {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1% 0%;
+  background-color: #191919;
+  color: #D4D4D4;
+  font-size: 15px;
+}
+.header__logo {
+  width: 200px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1% 0%;
+  background-color: #191919;
+  color: #D4D4D4;
+  font-size: 15px;
+}
+.footer__logo {
+  width: 100px;
+}
+
+article, section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1% 0%;
+  background-color: #C0A080;
+  color: #D4D4D4;
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
