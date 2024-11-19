@@ -5,21 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="David Gámiz Álvarez">
     <meta name="author" content="Alejandra Chaves Durán">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Images/logo_page.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/category.js"></script>
-    <title>Meowview Palace | Category</title>
+    <title>Meowview Palace | Seats</title>
 </head>
 <body>
     <header class="header">
         <div class="header__logo"><a href="./home.html"><img src="../Images/logo.png" alt="logo"></a></div>
     </header>
     <article>
-        <section class="films">
-            <h1 class="film__title"></h1>
-            <div class="seats__containter"></div>
-            <div class="guide__seats">
-                
+        <section class="seats">
+            <div class="seats__route">
+                <p><a href="home.html">Meowview Palace</a> / <a href="category.html">Categories</a></p>
+            </div>
+            <h1 class="seats__title">Choose your seats</h1>
+            <div class="seats__container">
+                <div class="seats__container__stage">
+                    <h1>Stage</h1>
+                </div>
+                <div class="seats__container__seats">
+                    <div class="seats__container__seats__left">
+                        <p>A</p> <p>B</p> <p>C</p> <p>D</p> <p>E</p> <p>F</p> <p>G</p> <p>H</p> <p>I</p>
+                    </div>
+                    
+                    <div class="seats__container__seats__right"> 
+                        <p>A</p> <p>B</p> <p>C</p> <p>D</p> <p>E</p> <p>F</p> <p>G</p> <p>H</p> <p>I</p>
+                    </div>
+                </div>
+            </div>
+            <div class="seats__guide">
+                <div class="seats__guide__available">
+                    <div class="seats__guide__img"></div>
+                    <h1>Available</h1>
+                </div>
+                <div class="seats__guide__select">
+                    <div class="seats__guide__img"></div>
+                    <h1>Select</h1>
+                </div>
+                <div class="seats__guide__taken">
+                    <div class="seats__guide__img"></div>
+                    <h1>Taken</h1>
+                </div>
+                <div class="seats__guide__vip">
+                    <div class="seats__guide__img"></div>
+                    <h1>VIP</h1>
+                </div>
+                <div class="seats__guide__disabled">
+                    <div class="seats__guide__img"></div>
+                    <h1>Disabled</h1>
+                </div>
+            </div>
+
+            <div class="seats__entryInfo">
+                <h1>How to use your tickets?</h1>
+                <p class="seats__entryInfo__qr">Show your QR</p>
+                <p>Access the venue directly by showing the QR code on your printed ticket or on your smartphone.</p>
             </div>
         </section>
     </article>

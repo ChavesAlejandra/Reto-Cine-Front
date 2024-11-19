@@ -75,7 +75,7 @@
 }
 
 .categories__title {
-  font-size: 40px;
+  font-size: 70px;
   margin: 2% 0% 3% 0%;
 }
 .categories__image {
@@ -87,9 +87,108 @@
 .films__title {
   font-size: 40px;
   margin: 2% 0% 3% 0%;
+  font-family: "Tangerine";
 }
 .films__container {
   width: 100%;
+  background-color: #191919;
+}
+.films__information {
+  display: none;
+  background-color: #951616;
+}
+.films__information h1 {
+  font-family: "Tangerine";
+}
+.films__information p {
+  font-family: "Dynalight";
+}
+
+.seats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.seats__route {
+  margin-right: 50%;
+  padding: 2% 0;
+}
+.seats__route a {
+  color: #951616;
+  font-family: "Tangerine";
+  font-size: 20px;
+  font-weight: bold;
+}
+.seats__title {
+  font-size: 40px;
+  margin: 2% 0% 3% 0%;
+  font-family: "Tangerine";
+}
+.seats__container {
+  width: 80%;
+  background-color: #191919;
+  border-radius: 5px;
+}
+.seats__container__stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2%;
+  background-color: #D4D4D4;
+  color: #191919;
+  font-family: "Tangerine";
+  font-size: 40px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.seats__container__seats {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+}
+.seats__guide {
+  background-color: #191919;
+  border-radius: 5px;
+  margin-top: 5%;
+  padding: 2%;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 40% 35% 25%;
+  grid-template-areas: "avail select taken" "vip . dis";
+}
+.seats__guide__available {
+  grid-area: avail;
+}
+.seats__guide__select {
+  grid-area: select;
+}
+.seats__guide__take {
+  grid-area: take;
+}
+.seats__guide__vip {
+  grid-area: vip;
+}
+.seats__guide__disabled {
+  grid-area: dis;
+}
+.seats__entryInfo {
+  width: 75%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.seats__entryInfo h1 {
+  font-size: 30px;
+  color: #191919;
+}
+.seats__entryInfo__qr {
+  font-size: 20px;
+  color: #951616;
 }
 
 img {

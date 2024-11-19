@@ -7,6 +7,7 @@
 
 @use '../sass/layout/home.scss' as *;
 @use '../sass/layout/category.scss' as *;
+@use '../sass/layout/seats.scss' as *;
 
 img { width: 100%; }
 
@@ -19,7 +20,7 @@ img { width: 100%; }
     padding: 1% 0%;
     background-color: $headerFooterBackColor;
     color: $generalFontColor;
-    font-family: $textfontfamily;
+    font-family: $textFontFamily;
     font-size: $normalFontSizeMobile;
 
     &__logo { width: 200px; }
@@ -34,7 +35,7 @@ img { width: 100%; }
     padding: 1% 0%;
     background-color: $headerFooterBackColor;
     color: $generalFontColor;
-    font-family: $textfontfamily;
+    font-family: $textFontFamily;
     font-size: $normalFontSizeMobile;
 
     &__logo { width: 100px; }
@@ -53,6 +54,6 @@ article, section
     font-size: $normalFontSizeMobile;
 }
 
-article p, section p { font-family: $textfontfamily; }
+article p, section p { font-family: $textFontFamily; }
 
-article h1, section h1 { font-family: $titlefontfamily; }
+article h1, section h1 { font-family: $titleFontFamily; }
