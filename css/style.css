@@ -104,6 +104,7 @@ img {
   padding: 1% 0%;
   background-color: #191919;
   color: #D4D4D4;
+  font-family: "Dynalight";
   font-size: 15px;
 }
 .header__logo {
@@ -118,6 +119,7 @@ img {
   padding: 1% 0%;
   background-color: #191919;
   color: #D4D4D4;
+  font-family: "Dynalight";
   font-size: 15px;
 }
 .footer__logo {
@@ -134,6 +136,14 @@ article, section {
   background-color: #C0A080;
   color: #D4D4D4;
   font-size: 15px;
+}
+
+article p, section p {
+  font-family: "Dynalight";
+}
+
+article h1, section h1 {
+  font-family: "Tangerine";
 }
 
 /*# sourceMappingURL=style.css.map */

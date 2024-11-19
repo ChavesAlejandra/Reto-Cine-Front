@@ -9,10 +9,22 @@
     {
         font-size: 40px;
         margin: 2% 0% 3% 0%;
+        font-family: $titlefontfamily;
     }
 
     &__container
     {
         width: 100%;
+        background-color: $headerFooterBackColor;
     }
+
+    &__information
+    {
+        display: none;
+        background-color: $elementsBackColor;
+    }
+
+    &__information h1 { font-family: $titlefontfamily; }
+
+    &__information p { font-family: $textfontfamily; }
 }

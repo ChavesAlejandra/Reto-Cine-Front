@@ -19,6 +19,7 @@ img { width: 100%; }
     padding: 1% 0%;
     background-color: $headerFooterBackColor;
     color: $generalFontColor;
+    font-family: $textfontfamily;
     font-size: $normalFontSizeMobile;
 
     &__logo { width: 200px; }
@@ -33,6 +34,7 @@ img { width: 100%; }
     padding: 1% 0%;
     background-color: $headerFooterBackColor;
     color: $generalFontColor;
+    font-family: $textfontfamily;
     font-size: $normalFontSizeMobile;
 
     &__logo { width: 100px; }
@@ -50,3 +52,7 @@ article, section
     color: $generalFontColor;
     font-size: $normalFontSizeMobile;
 }
+
+article p, section p { font-family: $textfontfamily; }
+
+article h1, section h1 { font-family: $titlefontfamily; }
