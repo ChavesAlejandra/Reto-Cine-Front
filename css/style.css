@@ -87,7 +87,7 @@
 .films__title {
   font-size: 40px;
   margin: 2% 0% 3% 0%;
-  font-family: "Tangerine";
+  font-family: "Dynalight";
 }
 .films__container {
   width: 100%;
@@ -98,10 +98,10 @@
   background-color: #951616;
 }
 .films__information h1 {
-  font-family: "Tangerine";
+  font-family: "Dynalight";
 }
 .films__information p {
-  font-family: "Dynalight";
+  font-family: "Tangerine";
 }
 
 .seats {
@@ -115,21 +115,25 @@
 }
 .seats__route a {
   color: #951616;
-  font-family: "Tangerine";
+  font-family: "Dynalight";
   font-size: 20px;
-  font-weight: bold;
 }
 .seats__title {
   font-size: 40px;
   margin: 2% 0% 3% 0%;
-  font-family: "Tangerine";
+  font-family: "Dynalight";
 }
 .seats__container {
-  width: 80%;
+  width: 95%;
   background-color: #191919;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .seats__container__stage {
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,15 +141,238 @@
   padding: 2%;
   background-color: #D4D4D4;
   color: #191919;
-  font-family: "Tangerine";
+  font-family: "Dynalight";
   font-size: 40px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 .seats__container__seats {
   display: flex;
   flex-direction: row;
   padding: 3%;
+  font-size: 33px;
+}
+.seats__container__seats__positions {
+  padding: 0 2%;
+  display: grid;
+  grid-template-areas: ". . . a4 a5 . a7 a8 . . ." "b1 b2 . b4 b5 b6 b7 b8 . b10 b11" "c1 c2 . c4 c5 c6 c7 c8 . c10 c11" "d1 d2 . d4 d5 d6 d7 d8 . d10 d11" "e1 e2 . e4 e5 e6 e7 e8 . e10 e11" "f1 f2 . f4 f5 f6 f7 f8 . f10 f11" "g1 g2 . g4 g5 g6 g7 g8 . g10 g11" "h1 h2 . h4 h5 h6 h7 h8 . h10 h11" "i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11";
+}
+.seats__container__seats__positions #A4 {
+  grid-area: a4;
+}
+.seats__container__seats__positions #A5 {
+  grid-area: a5;
+}
+.seats__container__seats__positions #A7 {
+  grid-area: a7;
+}
+.seats__container__seats__positions #A8 {
+  grid-area: a8;
+}
+.seats__container__seats__positions #B1 {
+  grid-area: b1;
+}
+.seats__container__seats__positions #B2 {
+  grid-area: b2;
+}
+.seats__container__seats__positions #B4 {
+  grid-area: b4;
+}
+.seats__container__seats__positions #B5 {
+  grid-area: b5;
+}
+.seats__container__seats__positions #B6 {
+  grid-area: b6;
+}
+.seats__container__seats__positions #B7 {
+  grid-area: b7;
+}
+.seats__container__seats__positions #B8 {
+  grid-area: b8;
+}
+.seats__container__seats__positions #B10 {
+  grid-area: b10;
+}
+.seats__container__seats__positions #B11 {
+  grid-area: b11;
+}
+.seats__container__seats__positions #C1 {
+  grid-area: c1;
+}
+.seats__container__seats__positions #C2 {
+  grid-area: c2;
+}
+.seats__container__seats__positions #C4 {
+  grid-area: c4;
+}
+.seats__container__seats__positions #C5 {
+  grid-area: c5;
+}
+.seats__container__seats__positions #C6 {
+  grid-area: c6;
+}
+.seats__container__seats__positions #C7 {
+  grid-area: c7;
+}
+.seats__container__seats__positions #C8 {
+  grid-area: c8;
+}
+.seats__container__seats__positions #C10 {
+  grid-area: c10;
+}
+.seats__container__seats__positions #C11 {
+  grid-area: c11;
+}
+.seats__container__seats__positions #D1 {
+  grid-area: d1;
+}
+.seats__container__seats__positions #D2 {
+  grid-area: d2;
+}
+.seats__container__seats__positions #D4 {
+  grid-area: d4;
+}
+.seats__container__seats__positions #D5 {
+  grid-area: d5;
+}
+.seats__container__seats__positions #D6 {
+  grid-area: d6;
+}
+.seats__container__seats__positions #D7 {
+  grid-area: d7;
+}
+.seats__container__seats__positions #D8 {
+  grid-area: d8;
+}
+.seats__container__seats__positions #D10 {
+  grid-area: d10;
+}
+.seats__container__seats__positions #D11 {
+  grid-area: d11;
+}
+.seats__container__seats__positions #E1 {
+  grid-area: e1;
+}
+.seats__container__seats__positions #E2 {
+  grid-area: e2;
+}
+.seats__container__seats__positions #E10 {
+  grid-area: e10;
+}
+.seats__container__seats__positions #E11 {
+  grid-area: e11;
+}
+.seats__container__seats__positions #F1 {
+  grid-area: f1;
+}
+.seats__container__seats__positions #F2 {
+  grid-area: f2;
+}
+.seats__container__seats__positions #F4 {
+  grid-area: f4;
+}
+.seats__container__seats__positions #F5 {
+  grid-area: f5;
+}
+.seats__container__seats__positions #F6 {
+  grid-area: f6;
+}
+.seats__container__seats__positions #F7 {
+  grid-area: f7;
+}
+.seats__container__seats__positions #F8 {
+  grid-area: f8;
+}
+.seats__container__seats__positions #F10 {
+  grid-area: f10;
+}
+.seats__container__seats__positions #F11 {
+  grid-area: f11;
+}
+.seats__container__seats__positions #G1 {
+  grid-area: g1;
+}
+.seats__container__seats__positions #G2 {
+  grid-area: g2;
+}
+.seats__container__seats__positions #G4 {
+  grid-area: g4;
+}
+.seats__container__seats__positions #G5 {
+  grid-area: g5;
+}
+.seats__container__seats__positions #G6 {
+  grid-area: g6;
+}
+.seats__container__seats__positions #G7 {
+  grid-area: g7;
+}
+.seats__container__seats__positions #G8 {
+  grid-area: g8;
+}
+.seats__container__seats__positions #G10 {
+  grid-area: g10;
+}
+.seats__container__seats__positions #G11 {
+  grid-area: g11;
+}
+.seats__container__seats__positions #H1 {
+  grid-area: h1;
+}
+.seats__container__seats__positions #H2 {
+  grid-area: h2;
+}
+.seats__container__seats__positions #H4 {
+  grid-area: h4;
+}
+.seats__container__seats__positions #H5 {
+  grid-area: h5;
+}
+.seats__container__seats__positions #H6 {
+  grid-area: h6;
+}
+.seats__container__seats__positions #H7 {
+  grid-area: h7;
+}
+.seats__container__seats__positions #H8 {
+  grid-area: h8;
+}
+.seats__container__seats__positions #H10 {
+  grid-area: h10;
+}
+.seats__container__seats__positions #H11 {
+  grid-area: h11;
+}
+.seats__container__seats__positions #I1 {
+  grid-area: i1;
+}
+.seats__container__seats__positions #I2 {
+  grid-area: i2;
+}
+.seats__container__seats__positions #I3 {
+  grid-area: i3;
+}
+.seats__container__seats__positions #I4 {
+  grid-area: i4;
+}
+.seats__container__seats__positions #I5 {
+  grid-area: i5;
+}
+.seats__container__seats__positions #I6 {
+  grid-area: i6;
+}
+.seats__container__seats__positions #I7 {
+  grid-area: i7;
+}
+.seats__container__seats__positions #I8 {
+  grid-area: i8;
+}
+.seats__container__seats__positions #I9 {
+  grid-area: i9;
+}
+.seats__container__seats__positions #I10 {
+  grid-area: i10;
+}
+.seats__container__seats__positions #I11 {
+  grid-area: i11;
 }
 .seats__guide {
   background-color: #191919;
@@ -154,23 +381,59 @@
   padding: 2%;
   width: 75%;
   display: grid;
-  grid-template-columns: 40% 35% 25%;
+  grid-template-columns: 33% 33% 33%;
   grid-template-areas: "avail select taken" "vip . dis";
 }
 .seats__guide__available {
   grid-area: avail;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+}
+.seats__guide__available div {
+  width: 35%;
 }
 .seats__guide__select {
   grid-area: select;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
 }
-.seats__guide__take {
-  grid-area: take;
+.seats__guide__select div {
+  width: 35%;
+}
+.seats__guide__taken {
+  grid-area: taken;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+}
+.seats__guide__taken div {
+  width: 35%;
 }
 .seats__guide__vip {
   grid-area: vip;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+}
+.seats__guide__vip div {
+  width: 35%;
 }
 .seats__guide__disabled {
   grid-area: dis;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-size: 20px;
+}
+.seats__guide__disabled div {
+  width: 35%;
 }
 .seats__entryInfo {
   width: 75%;
@@ -183,11 +446,15 @@
   text-align: center;
 }
 .seats__entryInfo h1 {
-  font-size: 30px;
+  font-size: 35px;
+  color: #D4D4D4;
+}
+.seats__entryInfo__info {
+  font-size: 20px;
   color: #191919;
 }
 .seats__entryInfo__qr {
-  font-size: 20px;
+  font-size: 25px;
   color: #951616;
 }
 
@@ -203,11 +470,14 @@ img {
   padding: 1% 0%;
   background-color: #191919;
   color: #D4D4D4;
-  font-family: "Dynalight";
+  font-family: "Tangerine";
   font-size: 15px;
 }
 .header__logo {
   width: 200px;
+}
+.header__menu {
+  width: 75px;
 }
 
 .footer {
@@ -218,11 +488,32 @@ img {
   padding: 1% 0%;
   background-color: #191919;
   color: #D4D4D4;
-  font-family: "Dynalight";
+  font-family: "Tangerine";
   font-size: 15px;
+}
+.footer a {
+  color: #D4D4D4;
 }
 .footer__logo {
   width: 100px;
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2%;
+  font-size: 20px;
+  width: 50%;
+}
+.footer__links__others {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+.footer__links__imp {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
 }
 
 article, section {
@@ -238,11 +529,11 @@ article, section {
 }
 
 article p, section p {
-  font-family: "Dynalight";
+  font-family: "Tangerine";
 }
 
 article h1, section h1 {
-  font-family: "Tangerine";
+  font-family: "Dynalight";
 }
 
 /*# sourceMappingURL=style.css.map */

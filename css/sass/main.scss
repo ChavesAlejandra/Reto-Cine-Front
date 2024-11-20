@@ -8,6 +8,7 @@
 @use '../sass/layout/home.scss' as *;
 @use '../sass/layout/category.scss' as *;
 @use '../sass/layout/seats.scss' as *;
+@use '../sass/layout/entries.scss' as *;
 
 img { width: 100%; }
 
@@ -24,6 +25,8 @@ img { width: 100%; }
     font-size: $normalFontSizeMobile;
 
     &__logo { width: 200px; }
+
+    &__menu{width: 75px;}
 }
 
 .footer
@@ -38,7 +41,33 @@ img { width: 100%; }
     font-family: $textFontFamily;
     font-size: $normalFontSizeMobile;
 
+    a{color: $generalFontColor;}
+
     &__logo { width: 100px; }
+
+    &__links
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2%;
+        font-size: 20px;
+        width: 50%;
+
+        &__others
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+        }
+
+        &__imp
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+        }
+    }
 }
 
 article, section
