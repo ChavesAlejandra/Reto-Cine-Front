@@ -1,0 +1,99 @@
+
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+.entries
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__film
+    {
+        flex-direction: column;
+        width: 50%;
+
+        h1 { font-size: 35px; }
+        &__img { width: 150px; }
+    }
+
+    &__info
+    {
+        flex-direction: column;
+        text-align: center;
+        width: 48%;
+        background-color: $popUpBackColor;
+        padding: 3% 2%;
+        border-radius: 5px;
+
+        &__id
+        {
+            font-size: 25px;
+            padding-bottom: 5%;
+        }
+        &__seats
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+
+            &__title
+            {
+                width: 100%;
+                padding: 5% 0%;
+                font-size: 25px;
+            }
+            &__singular
+            {
+                width: 45%;
+                margin: 0% 1.5%;
+
+                p
+                {
+                    padding: 3% 0%;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    &__menus
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        &__singular
+        {
+            width: 45%;
+            text-align: center;
+
+            h2 { font-size: 25px; }
+            &__img { width: 150px; }
+            &__options
+            {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+
+                &__add { width: 60px; }
+                &__less { width: 60px; }
+                &__inp
+                {
+                    width: 25%;
+                    margin: 0% 5%;
+                    border-radius: 5px;
+                    outline: none;
+                }
+            }
+        }
+    }
+}

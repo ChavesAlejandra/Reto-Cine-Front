@@ -458,6 +458,92 @@
   color: #951616;
 }
 
+.entries {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.entries__film {
+  flex-direction: column;
+  width: 50%;
+}
+.entries__film h1 {
+  font-size: 35px;
+}
+.entries__film__img {
+  width: 150px;
+}
+.entries__info {
+  flex-direction: column;
+  text-align: center;
+  width: 48%;
+  background-color: #951616;
+  padding: 3% 2%;
+  border-radius: 5px;
+}
+.entries__info__id {
+  font-size: 25px;
+  padding-bottom: 5%;
+}
+.entries__info__seats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.entries__info__seats__title {
+  width: 100%;
+  padding: 5% 0%;
+  font-size: 25px;
+}
+.entries__info__seats__singular {
+  width: 45%;
+  margin: 0% 1.5%;
+}
+.entries__info__seats__singular p {
+  padding: 3% 0%;
+  font-size: 20px;
+}
+.entries__menus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.entries__menus__singular {
+  width: 45%;
+  text-align: center;
+}
+.entries__menus__singular h2 {
+  font-size: 25px;
+}
+.entries__menus__singular__img {
+  width: 150px;
+}
+.entries__menus__singular__options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.entries__menus__singular__options__add {
+  width: 60px;
+}
+.entries__menus__singular__options__less {
+  width: 60px;
+}
+.entries__menus__singular__options__inp {
+  width: 25%;
+  margin: 0% 5%;
+  border-radius: 5px;
+  outline: none;
+}
+
 img {
   width: 100%;
 }
@@ -528,11 +614,11 @@ article, section {
   font-size: 15px;
 }
 
-article p, section p {
+p {
   font-family: "Tangerine";
 }
 
-article h1, section h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Dynalight";
 }
 
