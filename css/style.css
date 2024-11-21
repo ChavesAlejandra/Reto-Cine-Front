@@ -75,6 +75,7 @@
 }
 
 .categories__title {
+  color: #F5EFE6;
   font-size: 70px;
   margin: 2% 0% 3% 0%;
 }
@@ -460,34 +461,39 @@
 
 .entries {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.entries__film {
-  flex-direction: column;
-  width: 50%;
-}
-.entries__film h1 {
-  font-size: 35px;
-}
-.entries__film__img {
-  width: 150px;
+.entries__filmTitle {
+  color: #F5EFE6;
+  padding: 2% 0% 3% 0%;
+  font-size: 40px;
 }
 .entries__info {
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
-  width: 48%;
+  width: 95%;
   background-color: #951616;
   padding: 3% 2%;
   border-radius: 5px;
 }
-.entries__info__id {
+.entries__info__filmImg {
+  width: 30%;
+}
+.entries__info__ticket {
+  width: 65%;
+}
+.entries__info__ticket__id {
   font-size: 25px;
   padding-bottom: 5%;
 }
-.entries__info__seats {
+.entries__info__ticket__date, .entries__info__ticket__hour {
+  font-size: 20px;
+  padding: 2% 0%;
+}
+.entries__info__ticket__seats {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,16 +501,16 @@
   flex-wrap: wrap;
   width: 100%;
 }
-.entries__info__seats__title {
+.entries__info__ticket__seats__title {
   width: 100%;
   padding: 5% 0%;
   font-size: 25px;
 }
-.entries__info__seats__singular {
+.entries__info__ticket__seats__singular {
   width: 45%;
   margin: 0% 1.5%;
 }
-.entries__info__seats__singular p {
+.entries__info__ticket__seats__singular p {
   padding: 3% 0%;
   font-size: 20px;
 }
@@ -515,11 +521,18 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.entries__menus h2 {
+  text-align: center;
+  width: 100%;
+  padding: 5% 0% 7% 0%;
+  font-size: 30px;
+  color: #F5EFE6;
+}
 .entries__menus__singular {
   width: 45%;
   text-align: center;
 }
-.entries__menus__singular h2 {
+.entries__menus__singular h3 {
   font-size: 25px;
 }
 .entries__menus__singular__img {
@@ -531,10 +544,7 @@
   align-items: center;
   justify-content: space-around;
 }
-.entries__menus__singular__options__add {
-  width: 60px;
-}
-.entries__menus__singular__options__less {
+.entries__menus__singular__options__add, .entries__menus__singular__options__less {
   width: 60px;
 }
 .entries__menus__singular__options__inp {
