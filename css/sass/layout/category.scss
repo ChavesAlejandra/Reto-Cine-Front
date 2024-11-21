@@ -5,26 +5,48 @@
 
 .films
 {
-    &__title
+    &__category
     {
-        font-size: 40px;
-        margin: 2% 0% 3% 0%;
-        font-family: $titleFontFamily;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1
+        {
+            margin: 5% 0%;
+            font-size: 40px;
+        }
     }
-
     &__container
     {
-        width: 100%;
-        background-color: $divsBackColor;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+
+        &__singular
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40%;
+            padding: 5% 0%;
+            margin-bottom: 5%;
+            background-color: $divsBackColor;
+            border-radius: 5px;
+            box-shadow: #000000 5px 5px 10px;
+
+            &__img
+            {
+                width: 80%;
+                margin-bottom: 10%;
+            }
+            &__title, &__director { font-size: 25px; }
+        }
     }
-
-    &__information
-    {
-        display: none;
-        background-color: $popUpBackColor;
-    }
-
-    &__information h1 { font-family: $titleFontFamily; }
-
-    &__information p { font-family: $textFontFamily; }
 }

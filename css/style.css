@@ -85,24 +85,44 @@
   box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.6);
 }
 
-.films__title {
+.films__category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.films__category h1 {
+  margin: 5% 0%;
   font-size: 40px;
-  margin: 2% 0% 3% 0%;
-  font-family: "Dynalight";
 }
 .films__container {
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.films__container__singular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  padding: 5% 0%;
+  margin-bottom: 5%;
   background-color: #191919;
+  border-radius: 5px;
+  box-shadow: #000000 5px 5px 10px;
 }
-.films__information {
-  display: none;
-  background-color: #951616;
+.films__container__singular__img {
+  width: 80%;
+  margin-bottom: 10%;
 }
-.films__information h1 {
-  font-family: "Dynalight";
-}
-.films__information p {
-  font-family: "Tangerine";
+.films__container__singular__title, .films__container__singular__director {
+  font-size: 25px;
 }
 
 .seats {
