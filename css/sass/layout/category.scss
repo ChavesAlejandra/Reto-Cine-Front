@@ -8,14 +8,54 @@
     &__category
     {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
-        h1
+        width: 90%;
+
+        &__left
         {
-            margin: 5% 0%;
-            font-size: 40px;
+            width: 12%;
+            transform: rotate(225deg);
+        }
+        &__right
+        {
+            position: relative;
+            top: 5px;
+            width: 12%;
+            transform: rotate(45deg);
+        }
+
+        &__carousel
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            margin: 3% 0% 4% 0%;
+
+            @media (min-width: 1200px)
+            {
+                width: 70%;
+                margin: 2% 0% 4% 0%;
+            }
+
+            &__title
+            {
+                margin: 2% 0%;
+                font-size: 45px;
+
+                @media (min-width: 1200px) { font-size: 100px; }
+            }
+            &__img
+            {
+                display: none;
+                width: 100%;
+
+                @media (min-width: 1200px) { display: block; }
+            }
         }
     }
     &__container
@@ -31,11 +71,12 @@
         {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             text-align: center;
             width: 40%;
-            padding: 5% 0%;
+            min-height: 320px;
+            padding: 5% 2%;
             margin-bottom: 5%;
             background-color: $divsBackColor;
             border-radius: 5px;
