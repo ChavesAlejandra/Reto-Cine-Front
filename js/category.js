@@ -63,7 +63,7 @@ let categoryFilms = [];
 /* FETCH */
 const fetchData = () =>
 {
-    fetch(`https://localhost:7264/film/genre/${currentGenre}`)
+    fetch(`http://localhost:5030/film/genre/${currentGenre}`)
     .then(res => res.json())
     .then(data =>
         {
@@ -75,8 +75,9 @@ const fetchData = () =>
 
 const printData = (data) =>
 {
+    const popUp = document.getElementsByClassName('films__container__popUp')[0];
     const filmsContainer = document.getElementsByClassName('films__container')[0];
-    filmsContainer.innerHTML = '';
+    Array.from(filmsContainer.getElementsByClassName('films__container__singular')).forEach(rm => rm.remove());
     data.forEach(el =>
     {
         const filmContainerMain = filmsContainer.appendChild(document.createElement('div'));
@@ -95,5 +96,33 @@ const printData = (data) =>
         const filmDirector = filmContainerMain.appendChild(document.createElement('p'));
         filmDirector.classList.add('films__container__singular__director');
         filmDirector.textContent = `By: ${el._director}`;
+
+
+        filmImg.addEventListener('click', () => {
+            //popUp.style.opacity = 1;
+            //document.body.style.opacity = 0.8;
+            document.body.classList.add('.opacity');
+            popUp.style.display = 'flex';
+            
+            popUp.getElementsByClassName('films__container__popUp__img')[0].getElementsByTagName('img')[0].src = `../Images/Movies/${el._genres[0].substring(0,1).toUpperCase().concat(el._genres[0].substring(1,20))}/${el._filmImg}`;
+            popUp.getElementsByClassName('films__container__popUp__img')[0].getElementsByTagName('img')[0].alt = el._filmImg.replace('.jpg', '');
+            
+            popUp.getElementsByClassName('films__container__popUp__info__title')[0].textContent = el._title;
+            popUp.getElementsByClassName('films__container__popUp__info__director')[0].textContent = el._director;
+            popUp.getElementsByClassName('films__container__popUp__info__duration')[0].textContent = el._duration;
+            popUp.getElementsByClassName('films__container__popUp__info__description')[0].textContent = el._description;
+
+            popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
+                //document.body.style.opacity = 1;
+                document.body.classList.remove('.opacity');
+                popUp.style.display = 'none';
+            });
+
+            popUp.getElementsByClassName('films__container__popUp__buyEntries')[0].addEventListener('click', () => {
+                const a = document.createElement('a');
+                a.href = `./seats.html?film=${el._id}`;
+                a.click();
+            });
+        });
     });
 }
