@@ -3,6 +3,12 @@
 @use '../base/vars' as *;
 @use '../base/mixins' as *;
 
+.opacity:not(.films__container__popUp)
+{
+    opacity: 0.8;
+    pointer-events: none;
+}
+
 .films
 {
     &__category
@@ -66,6 +72,79 @@
         align-items: center;
         flex-wrap: wrap;
         text-align: center;
+
+        &__popUp
+        {
+            display: none;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            height: 70%;
+            width: 85%;
+            background-color: $popUpBackColor;
+            color: $generalFontColor;
+            border-radius: 5px;
+            box-shadow: #000000 -5px -5px 10px 10px;
+
+            &__close
+            {
+                position: absolute;
+                top: 3%;
+                right: 5%;
+                width: 50px;
+            }
+            &__img
+            {
+                position: relative;
+                bottom: 5%;
+                width: 50%;
+            }
+            &__info
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 45%;
+
+                &__title
+                {
+                    width: 90%;
+                    font-size: 30px;
+                    padding-bottom: 5%;
+                }
+
+                &__director, &__duration
+                {
+                    width: 50%;
+                    padding-bottom: 5%;
+                    font-size: 25px;
+                }
+                &__description
+                {
+                    width: 90%;
+                    font-size: 20px;
+                }
+            }
+            &__buyEntries
+            {
+                width: 40%;
+                position: absolute;
+                bottom: 7%;
+                right: 30%;
+                padding: 2% 3%;
+                background-color: $buttonsHoverBackColor;
+                border-radius: 5px;
+                font-family: $textFontFamily;
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
 
         &__singular
         {
