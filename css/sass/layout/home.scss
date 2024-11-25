@@ -6,16 +6,27 @@
 
 .categories
 {
+    flex-wrap: wrap;
+    text-align: center;
+    
     &__title
     {
+        width: 100%;
+        margin: 2% 0% 3% 0%;
         color: $importantFontColor;
         font-size: 70px;
-        margin: 2% 0% 3% 0%;
     }
     &__image
     {
         width: 95%;
         margin: 2% 0%;
         box-shadow: 5px 5px 4px 0px #00000099;
+
+        @media (min-width: 1200px) { width: 45%; }
+    }
+
+    @media (min-width: 1200px)
+    {
+        flex-direction: row;
     }
 }

@@ -1,33 +1,30 @@
-let currentGenre = '';
+const par = new URLSearchParams(window.location.search);
+let currentGenre = par.get('cat');
 let currentCategoryId;
 const categories =
 [
     {
         id: 1,
-        name: 'Animation',
-        img: 'animation.jpg'
+        name: 'Animation'
     },
     {
         id: 2,
-        name: 'Horror',
-        img: 'horror.jpg'
+        name: 'Horror'
     },
     {
         id: 3,
-        name: 'Romantic',
-        img: 'romantic.jpg'
+        name: 'Romantic'
     },
     {
         id: 4,
-        name: 'SciFi',
-        img: 'sciFi.jpg'
+        name: 'SciFi'
     }
 ]
 
 document.addEventListener('DOMContentLoaded', () => {
-    const categoryTitle = document.getElementsByClassName('films__category__carousel__title')[0];
-    const categoryImg = document.getElementsByClassName('films__category__carousel__img')[0].getElementsByTagName('img')[0];
-    currentGenre = categoryTitle.textContent.toLowerCase();
+    const categoryTitle = document.getElementsByClassName('films__category__title')[0];
+    if (currentGenre == undefined) { currentGenre = categoryTitle.textContent.toLowerCase(); }
+    else { categoryTitle.textContent = currentGenre.substring(0, 1).toUpperCase().concat(currentGenre.substring(1, 20)); }
     currentCategoryId = categories.filter(el => el.name === categoryTitle.textContent)[0].id;
 
     document.getElementsByClassName('films__category__left')[0].addEventListener('click', () => {
@@ -36,9 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cat = categories.filter(el => el.id === currentCategoryId)[0];
         categoryTitle.textContent = cat.name;
-        categoryImg.src = `../Images/Movies/Categories/${cat.img}`;
-        categoryImg.alt = cat.img.replace('.jpg', '');
-        currentGenre = cat.img.replace('.jpg', '');
+        currentGenre = cat.name.substring(0, 1).toLowerCase().concat(cat.name.substring(1, 20));
 
         fetchData();
     });
@@ -48,9 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const cat = categories.filter(el => el.id === currentCategoryId)[0];
         categoryTitle.textContent = cat.name;
-        categoryImg.src = `../Images/Movies/Categories/${cat.img}`;
-        categoryImg.alt = cat.img.replace('.jpg', '');
-        currentGenre = cat.img.replace('.jpg', '');
+        currentGenre = cat.name.substring(0, 1).toLowerCase().concat(cat.name.substring(1, 20));
 
         fetchData();
     });
@@ -86,7 +79,7 @@ const printData = (data) =>
         const filmImg = filmContainerMain.appendChild(document.createElement('div'));
         filmImg.classList.add('films__container__singular__img');
         const img = filmImg.appendChild(document.createElement('img'));
-        img.src = `../Images/Movies/${el._genres[0].substring(0,1).toUpperCase().concat(el._genres[0].substring(1,20))}/${el._filmImg}`
+        img.src = `../Images/Movies/${el._genres[0].substring(0,1).toUpperCase().concat(el._genres[0].substring(1,20))}/${el._filmImg}`;
         img.alt = el._filmImg.replace('.jpg', '');
 
         const filmTitle = filmContainerMain.appendChild(document.createElement('p'));
@@ -99,22 +92,22 @@ const printData = (data) =>
 
 
         filmImg.addEventListener('click', () => {
-            //popUp.style.opacity = 1;
-            //document.body.style.opacity = 0.8;
-            document.body.classList.add('.opacity');
+            document.body.style.pointerEvents = 'none';
+            popUp.style.pointerEvents = 'all';
             popUp.style.display = 'flex';
             
             popUp.getElementsByClassName('films__container__popUp__img')[0].getElementsByTagName('img')[0].src = `../Images/Movies/${el._genres[0].substring(0,1).toUpperCase().concat(el._genres[0].substring(1,20))}/${el._filmImg}`;
             popUp.getElementsByClassName('films__container__popUp__img')[0].getElementsByTagName('img')[0].alt = el._filmImg.replace('.jpg', '');
             
-            popUp.getElementsByClassName('films__container__popUp__info__title')[0].textContent = el._title;
-            popUp.getElementsByClassName('films__container__popUp__info__director')[0].textContent = el._director;
-            popUp.getElementsByClassName('films__container__popUp__info__duration')[0].textContent = el._duration;
-            popUp.getElementsByClassName('films__container__popUp__info__description')[0].textContent = el._description;
+            popUp.getElementsByClassName('films__container__popUp__title')[0].textContent = el._title;
+            popUp.getElementsByClassName('films__container__popUp__info__director')[0].textContent = `By: ${el._director}`;
+            popUp.getElementsByClassName('films__container__popUp__info__duration')[0].textContent = `${el._duration}s`;
+            popUp.getElementsByClassName('films__container__popUp__info__premiereYear')[0].textContent = `Premiere Year: ${el._premiereYear}`;
+            popUp.getElementsByClassName('films__container__popUp__info__ageRestriction')[0].textContent = `Minimum Age: ${el._ageRestriction}`;
+            popUp.getElementsByClassName('films__container__popUp__info__description')[0].textContent = `Summary${el._description}`;
 
             popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
-                //document.body.style.opacity = 1;
-                document.body.classList.remove('.opacity');
+                document.body.style.pointerEvents = 'all';
                 popUp.style.display = 'none';
             });
 
