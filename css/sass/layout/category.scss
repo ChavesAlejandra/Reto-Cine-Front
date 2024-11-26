@@ -3,6 +3,8 @@
 @use '../base/vars' as *;
 @use '../base/mixins' as *;
 
+.val { font-family: $numFontFamily; }
+
 .films
 {
     &__category
@@ -14,11 +16,15 @@
         text-align: center;
         width: 90%;
 
+        @media (min-width: 1024px) { justify-content: center; }
         &__left
         {
             width: 12%;
             transform: rotate(225deg);
             cursor: pointer;
+
+            @media (min-width: 768px) { width: 10%; }
+            @media (min-width: 1440px) { width: 9%; }
         }
         &__right
         {
@@ -27,13 +33,26 @@
             width: 12%;
             transform: rotate(45deg);
             cursor: pointer;
+
+            @media (min-width: 768px)
+            {
+                width: 10%;
+                top: 10px;
+            }
+            @media (min-width: 1440px) { width: 9%; }
         }
         &__title
         {
             margin: 2% 0%;
             font-size: 45px;
 
-            @media (min-width: 1200px) { font-size: 100px; }
+            @media (min-width: 768px) { font-size: 60px; }
+            @media (min-width: 1024px)
+            {
+                font-size: 70px;
+                padding: 0% 10%;
+            }
+            @media (min-width: 1440px) { font-size: 100px; }
         }
     }
     &__container
@@ -56,7 +75,7 @@
             top: 50%;
             left: 50%;
             transform: translateX(-50%) translateY(-50%);
-            height: 90%;
+            height: 70%;
             width: 90%;
             background-color: $popUpBackColor;
             color: $generalFontColor;
@@ -66,22 +85,26 @@
             &__close
             {
                 position: absolute;
-                top: 3%;
-                right: 5%;
+                top: 1%;
+                right: 2%;
                 width: 50px;
+                cursor: pointer;
+
+                @media (min-width: 768px) { width: 75px; }
             }
             &__title
             {
                 text-align: center;
                 width: 100%;
-                font-size: 35px;
                 padding-top: 5%;
-            }
-            &__img
-            {
-                position: relative;
-                bottom: 12%;
-                width: 50%;
+                font-size: 40px;
+
+                @media (min-width: 768px)
+                {
+                    padding-top: 7%;
+                    padding-bottom: 2%;
+                    font-size: 45px;
+                }
             }
             &__info
             {
@@ -91,54 +114,95 @@
                 align-items: center;
                 flex-wrap: wrap;
                 position: relative;
-                bottom: 12%;
-                width: 45%;
-                
+                bottom: 5%;
+                width: 100%;
+                font-size: 30px;
 
                 &__director
                 {
-                    width: 50%;
-                    padding-bottom: 5%;
-                    font-size: 25px;
+                    width: 45%;
+                    padding: 1% 0%;
+                    font-size: inherit;
                 }
                 &__duration
                 {
-                    width: 50%;
-                    padding-bottom: 5%;
-                    font-size: 40px;
+                    width: 45%;
+                    padding: 1% 0%;
+                    font-size: inherit;
                 }
                 &__premiereYear
                 {
-                    width: 50%;
-                    padding: 5% 0%;
-                    font-size: 25px;
+                    width: 45%;
+                    padding: 1% 0%;
+                    font-size: inherit;
                 }
                 &__ageRestriction
                 {
-                    width: 50%;
-                    padding: 5% 0%;
-                    font-size: 25px;
-                    border: black 1px;
+                    width: 45%;
+                    padding: 1% 0%;
+                    font-size: inherit;
                 }
-                &__description
+
+                @media (min-width: 768px)
                 {
-                    width: 90%;
-                    font-size: 20px;
+                    padding-bottom: 3%;
+                    font-size: 40px;
                 }
             }
-            &__buyEntries
+            &__img
+            {
+                width: 40%;
+                position: relative;
+                bottom: 12%;
+                border-radius: 5px;
+                overflow: hidden;
+
+                img { border-radius: 5px; }
+            }
+            &__description
+            {
+                width: 55%;
+                position: relative;
+                bottom: 12%;
+                font-family: $paragraphFontFamily;
+                font-size: 17px;
+                line-height: 1.2;
+
+                @media (min-width: 768px) { font-size: 25px; }
+                @media (min-width: 1024px) { font-size: 28px; }
+            }
+            &__selectSession
             {
                 width: 40%;
                 position: absolute;
-                bottom: 3%;
-                right: 30%;
+                bottom: 4%;
+                left: 5%;
                 padding: 2% 3%;
                 background-color: $buttonsHoverBackColor;
                 border-radius: 5px;
                 font-family: $textFontFamily;
                 font-size: 30px;
                 font-weight: bold;
+
             }
+            &__buyEntries
+            {
+                width: 40%;
+                position: absolute;
+                bottom: 4%;
+                right: 5%;
+                padding: 2% 3%;
+                background-color: $buttonsDisabledBackColor;
+                border-radius: 5px;
+                font-family: $textFontFamily;
+                font-size: 30px;
+                font-weight: bold;
+
+                @media (min-width: 768px) { bottom: 2%; }
+            }
+
+            @media (min-width: 768px) { height: 90%; }
+            @media (min-width: 1024px) { width: 70%; }
         }
 
         &__singular
@@ -150,7 +214,7 @@
             text-align: center;
             width: 40%;
             min-height: 320px;
-            padding: 5% 2%;
+            padding: 2%;
             margin-bottom: 5%;
             background-color: $divsBackColor;
             border-radius: 5px;
@@ -160,8 +224,37 @@
             {
                 width: 80%;
                 margin-bottom: 10%;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+
+                img { border-radius: 5px; }
+
+                @media (min-width: 1440px) { margin-bottom: 2%; }
+                @media (min-width: 1800px) { margin-bottom: 5%; }
             }
-            &__title, &__director { font-size: 25px; }
+            &__title, &__director
+            {
+                font-size: 25px;
+
+                @media (min-width: 768px) { font-size: 30px; }
+                @media (min-width: 1440px)
+                {
+                    font-size: 40px;
+                    padding: 3% 0%;
+                }
+                @media (min-width: 1440px) { padding: 0; }
+                @media (min-width: 1800px) { padding: 2% 0; }
+            }
+
+            @media (min-width: 768px)
+            {
+                width: 30%;
+                min-height: 430px;
+            }
+
+            @media (min-width: 1024px) { width: 23%; }
+            @media (min-width: 1440px) { min-height: 530px; }
         }
     }
 }

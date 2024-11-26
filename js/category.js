@@ -101,10 +101,10 @@ const printData = (data) =>
             
             popUp.getElementsByClassName('films__container__popUp__title')[0].textContent = el._title;
             popUp.getElementsByClassName('films__container__popUp__info__director')[0].textContent = `By: ${el._director}`;
-            popUp.getElementsByClassName('films__container__popUp__info__duration')[0].textContent = `${el._duration}s`;
-            popUp.getElementsByClassName('films__container__popUp__info__premiereYear')[0].textContent = `Premiere Year: ${el._premiereYear}`;
-            popUp.getElementsByClassName('films__container__popUp__info__ageRestriction')[0].textContent = `Minimum Age: ${el._ageRestriction}`;
-            popUp.getElementsByClassName('films__container__popUp__info__description')[0].textContent = `Summary${el._description}`;
+            popUp.querySelector('.films__container__popUp__info__duration .val').textContent = `${el._duration}`;
+            popUp.querySelector('.films__container__popUp__info__premiereYear .val').textContent = `${el._premiereYear}`;
+            popUp.querySelector('.films__container__popUp__info__ageRestriction .val').textContent = `${el._ageRestriction}`;
+            popUp.getElementsByClassName('films__container__popUp__description')[0].textContent = `${el._description}`;
 
             popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
                 document.body.style.pointerEvents = 'all';

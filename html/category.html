@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../Images/logo_page.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/category.js"></script>
@@ -31,14 +34,18 @@
             <div class="films__container__popUp">
                 <div class="films__container__popUp__close"><img src="../Images/Icons/close_blanco.png" alt="close"></div>
                 <h2 class="films__container__popUp__title"></h2>
-                <div class="films__container__popUp__img"><img src="" alt=""></div>
                 <div class="films__container__popUp__info">
                     <p class="films__container__popUp__info__director"></p>
-                    <p class="films__container__popUp__info__duration"></p>
-                    <p class="films__container__popUp__info__premiereYear"></p>
-                    <p class="films__container__popUp__info__ageRestriction"></p>
-                    <p class="films__container__popUp__info__description"></p>
+                    <p class="films__container__popUp__info__duration">Duration: <span class="val"></span>s</p>
+                    <p class="films__container__popUp__info__premiereYear">Premiere Year: <span class="val"></span></p>
+                    <p class="films__container__popUp__info__ageRestriction">Minimum Age: <span class="val"></span>y</p>
                 </div>
+                <div class="films__container__popUp__img"><img src="" alt=""></div>
+                <p class="films__container__popUp__description"></p>
+                <ul class="films__container__popUp__selectSessionUl">
+                    <li value="none">Select Session</li>
+                </ul>
+                <button class="films__container__popUp__selectSession">Select Session</button>
                 <button class="films__container__popUp__buyEntries">Buy Entries</button>
             </div>
         </section>
