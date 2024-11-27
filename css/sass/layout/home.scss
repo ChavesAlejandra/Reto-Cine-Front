@@ -22,10 +22,10 @@
         margin: 2% 0%;
         box-shadow: 5px 5px 4px 0px #00000099;
 
-        @media (min-width: 1200px) { width: 45%; }
+        @media (min-width: 1024px) { width: 45%; }
     }
 
-    @media (min-width: 1200px)
+    @media (min-width: 1024px)
     {
         flex-direction: row;
     }
