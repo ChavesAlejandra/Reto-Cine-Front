@@ -407,16 +407,64 @@
 .seats__route {
   margin-right: 50%;
   padding: 2% 0;
+  font-weight: bolder;
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .seats__route {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__route {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__route {
+    font-size: 60px;
+  }
 }
 .seats__route a {
   color: #951616;
   font-family: "Dynalight";
+  font-weight: normal;
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  .seats__route a {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__route a {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__route a {
+    font-size: 50px;
+  }
 }
 .seats__title {
   font-size: 40px;
   margin: 2% 0% 3% 0%;
   font-family: "Dynalight";
+}
+@media (min-width: 768px) {
+  .seats__title {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__title {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__title {
+    font-size: 70px;
+  }
 }
 .seats__container {
   width: 95%;
@@ -439,11 +487,36 @@
   font-family: "Dynalight";
   font-size: 40px;
 }
+@media (min-width: 1024px) {
+  .seats__container__stage {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__container__stage {
+    font-size: 60px;
+  }
+}
 .seats__container__seats {
   display: flex;
   flex-direction: row;
   padding: 3%;
   font-size: 33px;
+}
+@media (min-width: 768px) {
+  .seats__container__seats {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__container__seats {
+    font-size: 90px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__container__seats {
+    font-size: 120px;
+  }
 }
 .seats__container__seats__positions {
   padding: 0 2%;
@@ -1258,7 +1331,7 @@ img {
     width: 250px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .header__logo {
     width: 300px;
   }
