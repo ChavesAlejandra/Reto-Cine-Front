@@ -83,6 +83,9 @@
         {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             padding: 3%;
             font-size: 33px;
 
@@ -92,8 +95,11 @@
 
             @media (min-width: 1440px) { font-size: 120px; }
 
+            &__left, &__right { width: 10%; }
+
             &__positions
             {
+                width: 80%;
                 padding: 0 2%;
                 display: grid;
                 grid-template-areas: 
@@ -188,6 +194,16 @@
                 #I9{grid-area: i9;}
                 #I10{grid-area: i10;}
                 #I11{grid-area: i11}
+            }
+
+            &__num
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 80%;
+                font-family: $titleFontFamily;
             }
         }
     }

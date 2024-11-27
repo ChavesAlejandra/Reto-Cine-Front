@@ -500,6 +500,9 @@
 .seats__container__seats {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 3%;
   font-size: 33px;
 }
@@ -518,7 +521,11 @@
     font-size: 120px;
   }
 }
+.seats__container__seats__left, .seats__container__seats__right {
+  width: 10%;
+}
 .seats__container__seats__positions {
+  width: 80%;
   padding: 0 2%;
   display: grid;
   grid-template-areas: ". . . a4 a5 . a7 a8 . . ." "b1 b2 . b4 b5 b6 b7 b8 . b10 b11" "c1 c2 . c4 c5 c6 c7 c8 . c10 c11" "d1 d2 . d4 d5 d6 d7 d8 . d10 d11" "e1 e2 . e4 e5 e6 e7 e8 . e10 e11" "f1 f2 . f4 f5 f6 f7 f8 . f10 f11" "g1 g2 . g4 g5 g6 g7 g8 . g10 g11" "h1 h2 . h4 h5 h6 h7 h8 . h10 h11" "i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11";
@@ -741,6 +748,14 @@
 }
 .seats__container__seats__positions #I11 {
   grid-area: i11;
+}
+.seats__container__seats__num {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  font-family: "Dynalight";
 }
 .seats__guide {
   background-color: #191919;
