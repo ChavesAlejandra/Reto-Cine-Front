@@ -81,6 +81,7 @@
             color: $generalFontColor;
             border-radius: 5px;
             box-shadow: #000000 -5px -5px 10px 10px;
+            z-index: 10;
 
             &__close
             {
@@ -177,13 +178,49 @@
                 position: absolute;
                 bottom: 4%;
                 left: 5%;
-                padding: 2% 3%;
-                background-color: $buttonsHoverBackColor;
-                border-radius: 5px;
-                font-family: $textFontFamily;
-                font-size: 30px;
-                font-weight: bold;
 
+                &__container
+                {
+                    display: none;
+                    width: 100%;
+                    border-radius: 5px 5px 0 0;
+                    background-color: $buttonsHoverBackColor;
+                    font-family: $textFontFamily;
+                    font-size: 25px;
+                    font-weight: bold;
+                    overflow: hidden;
+
+                    &__opt
+                    {
+                        width: 100%;
+                        padding: 5%;
+                        background-color: $buttonsHoverBackColor;
+                        color: $elementsHoverFontColor;
+                        cursor: pointer;
+
+                        &:hover
+                        {
+                            background-color: $buttonsBackColor;
+                            color: $elementsFontColor;
+                        }
+                    }
+                    .selected
+                    {
+                        background-color: $buttonsBackColor;
+                        color: $elementsFontColor;
+                    }
+                }
+                &__button
+                {
+                    width: 100%;
+                    padding: 5%;
+                    background-color: $buttonsHoverBackColor;
+                    border: solid $buttonsBackColor 0 0 1px 1px;
+                    border-radius: 5px;
+                    font-family: $textFontFamily;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
             }
             &__buyEntries
             {
@@ -193,6 +230,7 @@
                 right: 5%;
                 padding: 2% 3%;
                 background-color: $buttonsDisabledBackColor;
+                color: $elementsHoverFontColor;
                 border-radius: 5px;
                 font-family: $textFontFamily;
                 font-size: 30px;

@@ -194,6 +194,7 @@
   color: #D4D4D4;
   border-radius: 5px;
   box-shadow: #000000 -5px -5px 10px 10px;
+  z-index: 10;
 }
 .films__container__popUp__close {
   position: absolute;
@@ -290,11 +291,40 @@
   position: absolute;
   bottom: 4%;
   left: 5%;
-  padding: 2% 3%;
+}
+.films__container__popUp__selectSession__container {
+  display: none;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
   background-color: #D4A50D;
+  font-family: "Tangerine";
+  font-size: 25px;
+  font-weight: bold;
+  overflow: hidden;
+}
+.films__container__popUp__selectSession__container__opt {
+  width: 100%;
+  padding: 5%;
+  background-color: #D4A50D;
+  color: #191919;
+  cursor: pointer;
+}
+.films__container__popUp__selectSession__container__opt:hover {
+  background-color: #951616;
+  color: #F5EFE6;
+}
+.films__container__popUp__selectSession__container .selected {
+  background-color: #951616;
+  color: #F5EFE6;
+}
+.films__container__popUp__selectSession__button {
+  width: 100%;
+  padding: 5%;
+  background-color: #D4A50D;
+  border: solid #951616 0 0 1px 1px;
   border-radius: 5px;
   font-family: "Tangerine";
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
 }
 .films__container__popUp__buyEntries {
@@ -304,6 +334,7 @@
   right: 5%;
   padding: 2% 3%;
   background-color: #AFAFAF;
+  color: #191919;
   border-radius: 5px;
   font-family: "Tangerine";
   font-size: 30px;

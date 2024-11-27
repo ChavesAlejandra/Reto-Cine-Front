@@ -52,24 +52,40 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 let categoryFilms = [];
+let sessions = [];
 
 /* FETCH */
 const fetchData = () =>
 {
-    fetch(`http://localhost:5030/film/genre/${currentGenre}`)
-    .then(res => res.json())
-    .then(data =>
+    
+    Promise.all
+    [
+        fetch(`http://localhost:5030/film/genre/${currentGenre}`)
+        .then(res => res.json())
+        .then(data =>
         {
             categoryFilms = data;
             console.log(data);
-            printData(data);
-        });
+            // printData(data);
+        }),
+        fetch('http://localhost:5030/session')
+        .then(res => res.json())
+        .then(data =>
+        {
+            sessions = data;
+            console.log(data);
+            printData(categoryFilms);
+        })
+    ];
 }
 
 const printData = (data) =>
 {
     const popUp = document.getElementsByClassName('films__container__popUp')[0];
     const filmsContainer = document.getElementsByClassName('films__container')[0];
+    const sessionContainer = document.getElementsByClassName('films__container__popUp__selectSession__container')[0];
+    const buyEntriesButton = popUp.getElementsByClassName('films__container__popUp__buyEntries')[0];
+    const selectSessionButton = document.getElementsByClassName('films__container__popUp__selectSession__button')[0];
     Array.from(filmsContainer.getElementsByClassName('films__container__singular')).forEach(rm => rm.remove());
     data.forEach(el =>
     {
@@ -93,6 +109,11 @@ const printData = (data) =>
 
         filmImg.addEventListener('click', () => {
             document.body.style.pointerEvents = 'none';
+            document.body.style.overflow = 'hidden';
+            document.getElementsByTagName('header')[0].style.opacity = 0.8;
+            document.getElementsByClassName('footer')[0].style.opacity = 0.8;
+            document.getElementsByClassName('films__category')[0].style.opacity = 0.8;
+            Array.from(document.getElementsByClassName('films__container__singular')).map(op => op.style.opacity = 0.8);
             popUp.style.pointerEvents = 'all';
             popUp.style.display = 'flex';
             
@@ -106,15 +127,86 @@ const printData = (data) =>
             popUp.querySelector('.films__container__popUp__info__ageRestriction .val').textContent = `${el._ageRestriction}`;
             popUp.getElementsByClassName('films__container__popUp__description')[0].textContent = `${el._description}`;
 
+            Array.from(sessionContainer.children).filter(ch => !ch.classList.contains('default')).map(ch => ch.remove());
+            document.getElementsByClassName('default')[0].addEventListener('click', (ev) => {
+                Array.from(ev.target.parentElement.children).filter(ch => ch.classList.contains('selected')).map(ch => ch.classList.remove('selected'));
+                ev.target.classList.add('selected');
+                selectSessionButton.textContent = ev.target.textContent;
+                ev.target.parentElement.parentElement.children[0].style.display = 'none';
+                
+                if (selectSessionButton.textContent === 'Select Session')
+                {
+                    buyEntriesButton.disabled = true;
+                    buyEntriesButton.style.backgroundColor = '#AFAFAF';
+                }
+                else
+                {
+                    buyEntriesButton.disabled = false;
+                    buyEntriesButton.style.backgroundColor = '#D4A50D';
+                }
+
+                localStorage.setItem('session', ev.target.value);
+            });
+
+            popUp.getElementsByClassName('films__container__popUp__selectSession__button')[0].addEventListener('click', (ev) => {
+                ev.target.style.borderRadius = '0 0 5px 5px';
+                ev.target.parentElement.children[0].style.display = 'block';
+            });
+
+            sessions.filter(se => se._film._id === el._id).forEach(se =>
+            {
+                const currentSession = sessionContainer.appendChild(document.createElement('li'));
+                currentSession.classList.add('films__container__popUp__selectSession__container__opt');
+                currentSession.value = se._id;
+                currentSession.textContent = se._date.concat(' ').concat(se._hour);
+
+                currentSession.addEventListener('click', (ev) => {
+                    Array.from(sessionContainer.children).filter(ch => ch.classList.contains('selected')).map(ch => ch.classList.remove('selected'));
+                    currentSession.classList.add('selected');
+                    currentSession.value = se._id;
+                    selectSessionButton.textContent = ev.target.textContent;
+                    ev.target.parentElement.parentElement.children[0].style.display = 'none';
+
+                    if (selectSessionButton.textContent === 'Select Session')
+                    {
+                        buyEntriesButton.disabled = true;
+                        buyEntriesButton.style.backgroundColor = '#AFAFAF';
+                    }
+                    else
+                    {
+                        buyEntriesButton.disabled = false;
+                        buyEntriesButton.style.backgroundColor = '#D4A50D';
+                        localStorage.setItem('session', se._id)
+                    }
+                });
+            });
+
             popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
                 document.body.style.pointerEvents = 'all';
+                document.body.style.overflow = 'visible';
+                document.getElementsByTagName('header')[0].style.opacity = 1;
+                document.getElementsByClassName('footer')[0].style.opacity = 1;
+                document.getElementsByClassName('films__category')[0].style.opacity = 1;
+                Array.from(document.getElementsByClassName('films__container__singular')).map(op => op.style.opacity = 1);
                 popUp.style.display = 'none';
             });
 
-            popUp.getElementsByClassName('films__container__popUp__buyEntries')[0].addEventListener('click', () => {
-                const a = document.createElement('a');
-                a.href = `./seats.html?film=${el._id}`;
-                a.click();
+            buyEntriesButton.addEventListener('click', (ev) => {
+                if (!ev.target.disabled)
+                {
+                    const a = document.createElement('a');
+                    a.href = `./seats.html?session=${localStorage.getItem('session')}`;
+                    a.click();
+                }
+            });
+
+            popUp.addEventListener('click', (ev) => {
+                if (!(ev.target.classList.contains('films__container__popUp__selectSession__button') || ev.target.classList.contains('films__container__popUp__selectSession__container') || ev.target.classList.contains('films__container__popUp__selectSession')))
+                {
+                    popUp.getElementsByClassName('films__container__popUp__selectSession__button')[0].style.borderRadius = '5px 5px 5px 5px';
+                    popUp.getElementsByClassName('films__container__popUp__selectSession__container')[0].style.display = 'none';
+                }
+                else { popUp.getElementsByClassName('films__container__popUp__selectSession__button')[0].style.borderRadius = '0 0 5px 5px'; }
             });
         });
     });
