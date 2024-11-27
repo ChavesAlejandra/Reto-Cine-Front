@@ -13,12 +13,27 @@
     {
         margin-right: 50%;
         padding: 2% 0;
+        font-weight: bolder;
+        font-size: 30px;
+
+        @media (min-width: 768px) { font-size: 40px; }
+
+        @media (min-width: 1024px) { font-size: 50px; }
+
+        @media (min-width: 1440px) { font-size: 60px; }
 
         a 
         {
             color: #951616;
             font-family: $titleFontFamily;
+            font-weight: normal;
             font-size: 20px;
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) { font-size: 50px; }
         }
 
     }
@@ -28,6 +43,12 @@
         font-size: 40px;
         margin: 2% 0% 3% 0%;
         font-family: $titleFontFamily;
+
+        @media (min-width: 768px) { font-size: 50px; }
+
+        @media (min-width: 1024px) { font-size: 60px; }
+
+        @media (min-width: 1440px) { font-size: 70px; }
     }
 
     &__container
@@ -52,17 +73,33 @@
             color: #191919;
             font-family: $titleFontFamily;
             font-size: 40px;
+
+            @media (min-width: 1024px) { font-size: 50px; }
+
+            @media (min-width: 1440px) { font-size: 60px; }
         }
 
         &__seats
         {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             padding: 3%;
             font-size: 33px;
 
+            @media (min-width: 768px) { font-size: 60px; }
+
+            @media (min-width: 1024px) { font-size: 90px; }
+
+            @media (min-width: 1440px) { font-size: 120px; }
+
+            &__left, &__right { width: 10%; }
+
             &__positions
             {
+                width: 80%;
                 padding: 0 2%;
                 display: grid;
                 grid-template-areas: 
@@ -157,6 +194,16 @@
                 #I9{grid-area: i9;}
                 #I10{grid-area: i10;}
                 #I11{grid-area: i11}
+            }
+
+            &__num
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 80%;
+                font-family: $titleFontFamily;
             }
         }
     }

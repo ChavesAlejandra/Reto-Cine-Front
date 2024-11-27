@@ -1,0 +1,78 @@
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+
+.legal
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3%;
+    &__title
+    {
+        margin: 2% 0%;
+        font-size: 30px;
+        color: #951616;
+
+        @media (min-width: 768px) { font-size: 60px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 70px;
+            padding: 0% 10%;
+        }
+        @media (min-width: 1440px) { font-size: 100px; }
+    }
+    h2
+    {
+        font-family: $paragraphFontFamily;
+        font-size: 20px;
+        color: $h2FontColor;
+        width: 100%;
+        padding: 3%;
+        @media (min-width: 768px) { font-size: 30px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 40px;
+        }
+        @media (min-width: 1440px) { font-size: 40px; }
+    }
+    p 
+    {
+        font-family: $paragraphFontFamily;
+        font-size: $normalFontSizeMobile;
+        color: $importantFontColor;
+        line-height: 1.3;
+
+        @media (min-width: 768px) { font-size: 25px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 30px;
+            margin: 1%;
+            padding: 1%;
+            
+        }
+        @media (min-width: 1440px) { font-size: 35px; }
+    }
+    a { color: #951616; }
+
+    li 
+    {
+        list-style: circle inside none;
+        font-family: $paragraphFontFamily;
+        font-size: $normalFontSizeMobile;
+        color: $importantFontColor;
+        line-height: 1;
+
+        @media (min-width: 768px) { font-size: 20px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 25px;
+            margin: 1%;
+            padding: 1%;
+            
+        }
+        @media (min-width: 1440px) { font-size: 30px; }
+    }
+}
