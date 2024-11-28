@@ -506,6 +506,16 @@
   align-items: center;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .seats__container {
+    width: 85%;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__container {
+    width: 75%;
+  }
+}
 .seats__container__stage {
   width: 75%;
   display: flex;
@@ -542,14 +552,14 @@
     font-size: 60px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .seats__container__seats {
     font-size: 90px;
   }
 }
 @media (min-width: 1440px) {
   .seats__container__seats {
-    font-size: 120px;
+    font-size: 90px;
   }
 }
 .seats__container__seats__left, .seats__container__seats__right {
@@ -780,13 +790,33 @@
 .seats__container__seats__positions #I11 {
   grid-area: i11;
 }
+@media (min-width: 1024px) {
+  .seats__container__seats__positions {
+    width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__container__seats__positions {
+    width: 70%;
+  }
+}
 .seats__container__seats__num {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
+  width: 77%;
   font-family: "Dynalight";
+}
+@media (min-width: 1024px) {
+  .seats__container__seats__num {
+    width: 55%;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__container__seats__num {
+    width: 65%;
+  }
 }
 .seats__guide {
   background-color: #191919;
@@ -808,6 +838,24 @@
 .seats__guide__available div {
   width: 35%;
 }
+@media (min-width: 768px) {
+  .seats__guide__available {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guide__available {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guide__available {
+    font-size: 50px;
+  }
+  .seats__guide__available div {
+    width: 25%;
+  }
+}
 .seats__guide__select {
   grid-area: select;
   display: flex;
@@ -819,6 +867,24 @@
 .seats__guide__select div {
   width: 35%;
 }
+@media (min-width: 768px) {
+  .seats__guide__select {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guide__select {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guide__select {
+    font-size: 50px;
+  }
+  .seats__guide__select div {
+    width: 25%;
+  }
+}
 .seats__guide__taken {
   grid-area: taken;
   display: flex;
@@ -828,6 +894,24 @@
 }
 .seats__guide__taken div {
   width: 35%;
+}
+@media (min-width: 768px) {
+  .seats__guide__taken {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guide__taken {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guide__taken {
+    font-size: 50px;
+  }
+  .seats__guide__taken div {
+    width: 25%;
+  }
 }
 .seats__guide__vip {
   grid-area: vip;
@@ -839,6 +923,24 @@
 .seats__guide__vip div {
   width: 35%;
 }
+@media (min-width: 768px) {
+  .seats__guide__vip {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guide__vip {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guide__vip {
+    font-size: 50px;
+  }
+  .seats__guide__vip div {
+    width: 25%;
+  }
+}
 .seats__guide__disabled {
   grid-area: dis;
   display: flex;
@@ -848,6 +950,24 @@
 }
 .seats__guide__disabled div {
   width: 35%;
+}
+@media (min-width: 768px) {
+  .seats__guide__disabled {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guide__disabled {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guide__disabled {
+    font-size: 50px;
+  }
+  .seats__guide__disabled div {
+    width: 25%;
+  }
 }
 .seats__entryInfo {
   width: 75%;
@@ -863,13 +983,58 @@
   font-size: 35px;
   color: #D4D4D4;
 }
+@media (min-width: 768px) {
+  .seats__entryInfo h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__entryInfo h1 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__entryInfo h1 {
+    font-size: 70px;
+  }
+}
 .seats__entryInfo__info {
   font-size: 20px;
   color: #191919;
 }
+@media (min-width: 768px) {
+  .seats__entryInfo__info {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__entryInfo__info {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__entryInfo__info {
+    font-size: 50px;
+  }
+}
 .seats__entryInfo__qr {
   font-size: 25px;
   color: #951616;
+}
+@media (min-width: 768px) {
+  .seats__entryInfo__qr {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__entryInfo__qr {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__entryInfo__qr {
+    font-size: 55px;
+  }
 }
 
 .entries {

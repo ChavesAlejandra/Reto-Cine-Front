@@ -61,6 +61,10 @@
         align-items: center;
         flex-direction: column;
 
+        @media (min-width: 1024px) { width: 85%; }
+
+        @media (min-width: 1440px) { width: 75%; }
+
         &__stage
         {
             width: 75%;
@@ -89,11 +93,11 @@
             padding: 3%;
             font-size: 33px;
 
-            @media (min-width: 768px) { font-size: 60px; }
+            @media (min-width: 768px) { font-size: 60px; }         
 
-            @media (min-width: 1024px) { font-size: 90px; }
+            @media (min-width: 1440px) { font-size: 90px; }
 
-            @media (min-width: 1440px) { font-size: 120px; }
+            @media (min-width: 1440px) { font-size: 90px; }
 
             &__left, &__right { width: 10%; }
 
@@ -194,6 +198,11 @@
                 #I9{grid-area: i9;}
                 #I10{grid-area: i10;}
                 #I11{grid-area: i11}
+
+
+                @media (min-width: 1024px) { width: 60%; }
+
+                @media (min-width: 1440px) { width: 70%; }
             }
 
             &__num
@@ -202,8 +211,12 @@
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
-                width: 80%;
+                width: 77%;
                 font-family: $titleFontFamily;
+
+                @media (min-width: 1024px) { width: 55%; }
+
+                @media (min-width: 1440px) { width: 65%; }
             }
         }
     }
@@ -230,6 +243,16 @@
             font-size: 20px;
 
             div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
         }
 
         &__select
@@ -242,6 +265,16 @@
             font-size: 20px;
 
             div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
         }
 
         &__taken
@@ -253,6 +286,16 @@
             font-size: 20px;
 
             div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
         }
 
         &__vip
@@ -264,6 +307,16 @@
             font-size: 20px;
 
             div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
         }
 
         &__disabled
@@ -275,6 +328,16 @@
             font-size: 20px;
 
             div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
         }
     }
 
@@ -292,18 +355,36 @@
         {
             font-size: 35px;
             color: #D4D4D4;
+
+            @media (min-width: 768px) { font-size: 50px; }
+
+            @media (min-width: 1024px) { font-size: 60px; }
+    
+            @media (min-width: 1440px) { font-size: 70px; }
         }
 
         &__info
         {
             font-size: 20px;
             color: #191919;
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) { font-size: 50px; }
         }
 
         &__qr
         {
             font-size: 25px;
             color: #951616;
+
+            @media (min-width: 768px) { font-size: 35px; }
+
+            @media (min-width: 1024px) { font-size: 45px; }
+
+            @media (min-width: 1440px) { font-size: 55px; }
         }      
     }
 }
