@@ -268,6 +268,16 @@
 .films__container__popUp__img img {
   border-radius: 5px;
 }
+@media (min-width: 1440px) {
+  .films__container__popUp__img {
+    width: 30%;
+  }
+}
+@media (min-width: 1600px) {
+  .films__container__popUp__img {
+    width: 25%;
+  }
+}
 .films__container__popUp__description {
   width: 55%;
   position: relative;
@@ -317,6 +327,16 @@
   background-color: #951616;
   color: #F5EFE6;
 }
+@media (min-width: 768px) {
+  .films__container__popUp__selectSession__container {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1600px) {
+  .films__container__popUp__selectSession__container {
+    font-size: 40px;
+  }
+}
 .films__container__popUp__selectSession__button {
   width: 100%;
   padding: 5%;
@@ -326,6 +346,27 @@
   font-family: "Tangerine";
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .films__container__popUp__selectSession__button {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1600px) {
+  .films__container__popUp__selectSession__button {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .films__container__popUp__selectSession {
+    bottom: 3%;
+  }
+}
+@media (min-width: 1440px) {
+  .films__container__popUp__selectSession {
+    width: 35%;
+  }
 }
 .films__container__popUp__buyEntries {
   width: 40%;
@@ -339,10 +380,22 @@
   font-family: "Tangerine";
   font-size: 30px;
   font-weight: bold;
+  cursor: not-allowed;
 }
 @media (min-width: 768px) {
   .films__container__popUp__buyEntries {
-    bottom: 2%;
+    bottom: 3%;
+    font-size: 35px;
+  }
+}
+@media (min-width: 1440px) {
+  .films__container__popUp__buyEntries {
+    width: 35%;
+  }
+}
+@media (min-width: 1600px) {
+  .films__container__popUp__buyEntries {
+    font-size: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -353,6 +406,11 @@
 @media (min-width: 1024px) {
   .films__container__popUp {
     width: 70%;
+  }
+}
+@media (min-width: 1440px) {
+  .films__container__popUp {
+    width: 55%;
   }
 }
 .films__container__singular {

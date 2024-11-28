@@ -159,6 +159,9 @@
                 overflow: hidden;
 
                 img { border-radius: 5px; }
+
+                @media (min-width: 1440px) { width: 30%; }
+                @media (min-width: 1600px) { width: 25%; }
             }
             &__description
             {
@@ -209,6 +212,8 @@
                         background-color: $buttonsBackColor;
                         color: $elementsFontColor;
                     }
+                    @media (min-width: 768px) { font-size: 35px; }
+                    @media (min-width: 1600px) { font-size: 40px; }
                 }
                 &__button
                 {
@@ -220,7 +225,14 @@
                     font-family: $textFontFamily;
                     font-size: 28px;
                     font-weight: bold;
+                    cursor: pointer;
+
+                    @media (min-width: 768px) { font-size: 35px; }
+                    @media (min-width: 1600px) { font-size: 40px; }
                 }
+
+                @media (min-width: 768px) { bottom: 3%; }
+                @media (min-width: 1440px) { width: 35%; }
             }
             &__buyEntries
             {
@@ -235,12 +247,20 @@
                 font-family: $textFontFamily;
                 font-size: 30px;
                 font-weight: bold;
+                cursor: not-allowed;
 
-                @media (min-width: 768px) { bottom: 2%; }
+                @media (min-width: 768px)
+                {
+                    bottom: 3%;
+                    font-size: 35px;
+                }
+                @media (min-width: 1440px) { width: 35%; }
+                @media (min-width: 1600px) { font-size: 40px; }
             }
 
             @media (min-width: 768px) { height: 90%; }
             @media (min-width: 1024px) { width: 70%; }
+            @media (min-width: 1440px) { width: 55%; }
         }
 
         &__singular

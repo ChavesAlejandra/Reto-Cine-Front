@@ -138,11 +138,13 @@ const printData = (data) =>
                 {
                     buyEntriesButton.disabled = true;
                     buyEntriesButton.style.backgroundColor = '#AFAFAF';
+                    buyEntriesButton.style.cursor = 'not-allowed';
                 }
                 else
                 {
                     buyEntriesButton.disabled = false;
                     buyEntriesButton.style.backgroundColor = '#D4A50D';
+                    buyEntriesButton.style.cursor = 'pointer';
                 }
 
                 localStorage.setItem('session', ev.target.value);
@@ -171,12 +173,14 @@ const printData = (data) =>
                     {
                         buyEntriesButton.disabled = true;
                         buyEntriesButton.style.backgroundColor = '#AFAFAF';
+                        buyEntriesButton.style.cursor = 'not-allowed';
                     }
                     else
                     {
                         buyEntriesButton.disabled = false;
                         buyEntriesButton.style.backgroundColor = '#D4A50D';
-                        localStorage.setItem('session', se._id)
+                        buyEntriesButton.style.cursor = 'pointer';
+                        localStorage.setItem('session', se._id);
                     }
                 });
             });
