@@ -3,6 +3,12 @@
 @use '../base/vars' as *;
 @use '../base/mixins' as *;
 
+@keyframes buyHover
+{
+    0% { background-color: $buttonsBackColor; color: $elementsFontColor; }
+    100% { background-color: $buttonsHoverBackColor; color: $elementsHoverFontColor; }
+}
+
 .seats
 {
     display: flex;
@@ -99,7 +105,11 @@
 
             @media (min-width: 1440px) { font-size: 90px; }
 
-            &__left, &__right { width: 10%; }
+            &__left, &__right
+            {
+                width: 10%;
+                cursor: default;
+            }
 
             &__positions
             {
@@ -116,6 +126,8 @@
                 "g1 g2 . g4 g5 g6 g7 g8 . g10 g11"
                 "h1 h2 . h4 h5 h6 h7 h8 . h10 h11"
                 "i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11";
+
+                div { cursor: pointer; }
                 
                 #A4{grid-area: a4;}
                 #A5{grid-area: a5;}
@@ -213,6 +225,7 @@
                 align-items: center;
                 width: 77%;
                 font-family: $titleFontFamily;
+                cursor: default;
 
                 @media (min-width: 1024px) { width: 55%; }
 
@@ -339,6 +352,67 @@
                 div{width: 25%;}
             }
         }
+    }
+
+    &__buy
+    {
+        width: 35%;
+        padding: 3% 5%;
+        margin: 5% 0% 0% 0%;
+        background-color: $buttonsDisabledBackColor;
+        color: $elementsHoverFontColor;
+        border-radius: 5px;
+        font-family: $textFontFamily;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+
+        @media (min-width: 768px)
+        {
+            width: 30%;
+            font-size: 40px;
+        }
+        @media (min-width: 1024px) { width: 25%; }
+        @media (min-width: 1440px)
+        {
+            padding: 2% 0%;
+            font-size: 55px;
+        }
+        @media (min-width: 1650px) { width: 18%; }
+    }
+
+    &__buyEnabled
+    {
+        width: 35%;
+        padding: 3% 5%;
+        margin: 5% 0% 0% 0%;
+        border-radius: 5px;
+        background-color: $buttonsBackColor;
+        color: $elementsFontColor;
+        font-family: $textFontFamily;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover
+        {
+            animation: buyHover 0.8s;
+            background-color: $buttonsHoverBackColor;
+            color: $elementsHoverFontColor;
+        }
+
+        @media (min-width: 768px)
+        {
+            width: 30%;
+            font-size: 40px;
+        }
+        @media (min-width: 1024px) { width: 25%; }
+        @media (min-width: 1440px)
+        {
+            padding: 2% 0%;
+            font-size: 55px;
+        }
+        @media (min-width: 1650px) { width: 18%; }
     }
 
     &__entryInfo

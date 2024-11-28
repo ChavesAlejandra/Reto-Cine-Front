@@ -1,3 +1,4 @@
+const date = new Date();
 const par = new URLSearchParams(window.location.search);
 let currentGenre = par.get('cat');
 let currentCategoryId;
@@ -160,7 +161,7 @@ const printData = (data) =>
                 const currentSession = sessionContainer.appendChild(document.createElement('li'));
                 currentSession.classList.add('films__container__popUp__selectSession__container__opt');
                 currentSession.value = se._id;
-                currentSession.textContent = se._date.concat(' ').concat(se._hour);
+                currentSession.textContent = se._date.replace('T', ' ').substring(0, 16);
 
                 currentSession.addEventListener('click', (ev) => {
                     Array.from(sessionContainer.children).filter(ch => ch.classList.contains('selected')).map(ch => ch.classList.remove('selected'));
@@ -183,6 +184,16 @@ const printData = (data) =>
                         localStorage.setItem('session', se._id);
                     }
                 });
+                const seSplitDate = se._date.split('T')[0];
+                const seSplitTime = se._date.split('T')[1];
+                const seDate = new Date(seSplitDate.split('-')[0], seSplitDate.split('-')[1]-1, seSplitDate.split('-')[2], seSplitTime.split(':')[0], seSplitTime.split(':')[1], seSplitTime.split(':')[2]);
+                
+                if (seDate < date)
+                {
+                    currentSession.style.backgroundColor = '#AFAFAF';
+                    currentSession.style.cursor = 'not-allowed';
+                    currentSession.style.pointerEvents = 'none';
+                }
             });
 
             popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
