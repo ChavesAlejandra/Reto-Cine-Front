@@ -37,30 +37,172 @@ img { width: 100%; }
 
     &__menu
     {
-        width: 75px;
-        @media (min-width: 1024px) { display: none; }
+       display: flex;
+       flex-direction: column;
+       position: relative;
+       width: 75px;
+       @media (min-width: 1024px) { display: none;}
+
+       &__list
+       {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 95%;
+        &__categories
+        {
+        visibility: hidden;
+
+        font-size: 25px;
+        color: $importantFontColor;
+
+        &__title
+        {
+            cursor: pointer;
+            &:hover{color: $buttonsHoverBackColor;}
+        }
+
+        &__list
+        {
+            display: flex;
+            flex-direction: column;
+            background-color: $menusBackColor;
+            font-size: 20px;
+
+            li
+            {
+                cursor: pointer;
+                &:hover
+                {
+                    background-color: $menusHoverBackColor;
+                    color: $liHoverFontColor;
+                }
+            }
+            
+            @media (min-width: 1440px) { font-size: 50px; }
+        }
+
+        @media (min-width: 1440px) { font-size: 65px; }
+        }
+
+        &__info
+        {
+            visibility: hidden;
+            font-size: 25px;
+            color: $importantFontColor;
+
+            &__title
+            {
+                cursor: pointer;
+                &:hover{color: $buttonsHoverBackColor;}
+            }
+
+            &__list
+            {
+                display: flex;
+                flex-direction: column;
+                background-color: $menusBackColor;
+                font-size: 20px;
+
+                li
+                {
+                    cursor: pointer;
+                    &:hover
+                    {
+                        background-color: $menusHoverBackColor;
+                        color: $liHoverFontColor;
+                    }
+                }
+
+                @media (min-width: 1440px) { font-size: 50px; }
+            }
+            @media (min-width: 1440px) { font-size: 65px; }
+        }
+       }
     }
 
-    &__categories
+    #menu
     {
         display: none;
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        @media (min-width: 1024px) { display: flex;}
+
+        &__categories
+        {
+        visibility: hidden;
         font-size: 55px;
         color: $importantFontColor;
 
-        &__list{display: none;}
-        @media (min-width: 1024px) { display: block; }
-        @media (min-width: 1440px) { font-size: 65px; }
-    }
+        @media (min-width: 1024px) { visibility: visible; }
 
-    &__info
-    {
-        display: none;
-        font-size: 55px;
-        color: $importantFontColor;
+        &__title
+        {
+            cursor: pointer;
+            &:hover{color: $buttonsHoverBackColor;}
+        }
 
-        &__list{display: none;}
-        @media (min-width: 1024px) { display: block; }
+        &__list
+        {
+            visibility: hidden;
+            flex-direction: column;
+            background-color: $menusBackColor;
+            font-size: 40px;
+
+            li
+            {
+                cursor: pointer;
+                &:hover
+                {
+                    background-color: $menusHoverBackColor;
+                    color: $liHoverFontColor;
+                }
+            }
+            
+            @media (min-width: 1440px) { font-size: 50px; }
+        }
+
         @media (min-width: 1440px) { font-size: 65px; }
+        }
+
+        &__info
+        {
+            visibility: hidden;
+            font-size: 55px;
+            color: $importantFontColor;
+
+            @media (min-width: 1024px) { visibility: visible; }
+
+            &__title
+            {
+                cursor: pointer;
+                &:hover{color: $buttonsHoverBackColor;}
+            }
+
+            &__list
+            {
+                visibility: hidden;
+                flex-direction: column;
+                background-color: $menusBackColor;
+                font-size: 40px;
+
+                li
+                {
+                    cursor: pointer;
+                    &:hover
+                    {
+                        background-color: $menusHoverBackColor;
+                        color: $liHoverFontColor;
+                    }
+                }
+
+                @media (min-width: 1440px) { font-size: 50px; }
+            }
+            @media (min-width: 1440px) { font-size: 65px; }
+        }
     }
 }
 
