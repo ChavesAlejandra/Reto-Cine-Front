@@ -152,7 +152,7 @@
             }
             &__img
             {
-                width: 40%;
+                width: 30%;
                 position: relative;
                 bottom: 12%;
                 border-radius: 5px;
@@ -160,8 +160,10 @@
 
                 img { border-radius: 5px; }
 
+                @media (min-width: 768px) { width: 20%; }
+                @media (min-width: 1024px) { width: 20%; }
                 @media (min-width: 1440px) { width: 30%; }
-                @media (min-width: 1600px) { width: 25%; }
+                @media (min-width: 1500px) { width: 20%; }
             }
             &__description
             {
@@ -173,7 +175,8 @@
                 line-height: 1.2;
 
                 @media (min-width: 768px) { font-size: 25px; }
-                @media (min-width: 1024px) { font-size: 28px; }
+                @media (min-width: 1024px) { width: 65%; }
+                @media (min-width: 1440px) { width: 55%; }
             }
             &__selectSession
             {

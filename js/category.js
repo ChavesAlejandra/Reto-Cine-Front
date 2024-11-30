@@ -58,26 +58,21 @@ let sessions = [];
 /* FETCH */
 const fetchData = () =>
 {
+    fetch(`http://localhost:5030/film/genre/${currentGenre}`)
+    .then(res => res.json())
+    .then(data =>
+    {
+        categoryFilms = data;
+        console.log(data);
+    });
     
-    Promise.all
-    [
-        fetch(`http://localhost:5030/film/genre/${currentGenre}`)
-        .then(res => res.json())
-        .then(data =>
-        {
-            categoryFilms = data;
-            console.log(data);
-            // printData(data);
-        }),
-        fetch('http://localhost:5030/session')
-        .then(res => res.json())
-        .then(data =>
-        {
-            sessions = data;
-            console.log(data);
-            printData(categoryFilms);
-        })
-    ];
+    fetch('http://localhost:5030/session')
+    .then(res => res.json())
+    .then(data => {
+        sessions = data;
+        console.log(data);
+        printData(categoryFilms);
+    });
 }
 
 const printData = (data) =>
@@ -188,7 +183,7 @@ const printData = (data) =>
                 const seSplitTime = se._date.split('T')[1];
                 const seDate = new Date(seSplitDate.split('-')[0], seSplitDate.split('-')[1]-1, seSplitDate.split('-')[2], seSplitTime.split(':')[0], seSplitTime.split(':')[1], seSplitTime.split(':')[2]);
                 
-                if (seDate < date)
+                if (seDate < date || se._full)
                 {
                     currentSession.style.backgroundColor = '#AFAFAF';
                     currentSession.style.cursor = 'not-allowed';

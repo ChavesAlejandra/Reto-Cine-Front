@@ -37,10 +37,11 @@
                 font-size: 25px;
                 padding-bottom: 5%;
             }
-            &__date, &__hour
+            &__date { font-size: 30px; }
+            &__room
             {
-                font-size: 20px;
-                padding: 2% 0%;
+                padding: 2% 0% 0% 0%;
+                font-size: 30px;
             }
             &__seats
             {

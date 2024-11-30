@@ -259,7 +259,7 @@
   }
 }
 .films__container__popUp__img {
-  width: 40%;
+  width: 30%;
   position: relative;
   bottom: 12%;
   border-radius: 5px;
@@ -268,14 +268,24 @@
 .films__container__popUp__img img {
   border-radius: 5px;
 }
+@media (min-width: 768px) {
+  .films__container__popUp__img {
+    width: 20%;
+  }
+}
+@media (min-width: 1024px) {
+  .films__container__popUp__img {
+    width: 20%;
+  }
+}
 @media (min-width: 1440px) {
   .films__container__popUp__img {
     width: 30%;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
   .films__container__popUp__img {
-    width: 25%;
+    width: 20%;
   }
 }
 .films__container__popUp__description {
@@ -293,7 +303,12 @@
 }
 @media (min-width: 1024px) {
   .films__container__popUp__description {
-    font-size: 28px;
+    width: 65%;
+  }
+}
+@media (min-width: 1440px) {
+  .films__container__popUp__description {
+    width: 55%;
   }
 }
 .films__container__popUp__selectSession {
@@ -1213,9 +1228,12 @@
   font-size: 25px;
   padding-bottom: 5%;
 }
-.entries__info__ticket__date, .entries__info__ticket__hour {
-  font-size: 20px;
-  padding: 2% 0%;
+.entries__info__ticket__date {
+  font-size: 30px;
+}
+.entries__info__ticket__room {
+  padding: 2% 0% 0% 0%;
+  font-size: 30px;
 }
 .entries__info__ticket__seats {
   display: flex;

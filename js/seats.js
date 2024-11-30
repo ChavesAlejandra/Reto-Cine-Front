@@ -39,22 +39,16 @@ const putFetchData = (seat, bool) =>
 
 const postTicketFetchData = (seat) =>
 {
-    seat.forEach(se =>
+    const postData = seat;
+    console.log(postData);
+    fetch(`http://localhost:5030/ticket/session/${currentSession}`,
     {
-        const postData = se;
-        console.log(postData);
-        fetch(`http://localhost:5030/ticket/session/${currentSession}`,
-            {
-                method: 'POST',
-                headers:
-                {
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(postData)
-            })
-        .then(res => res.json())
-        .then(data => console.log(data));
+        method: 'POST',
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(postData)
     })
+    .then(res => res.json())
+    .then(data => console.log(data));
 }
 
 let currentSeats = [];
