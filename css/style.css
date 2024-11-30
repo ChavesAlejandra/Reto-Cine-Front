@@ -1198,6 +1198,16 @@
   }
 }
 
+@keyframes buyButtonHover {
+  0% {
+    background-color: #951616;
+    color: #F5EFE6;
+  }
+  100% {
+    background-color: #D4A50D;
+    color: #191919;
+  }
+}
 .entries {
   display: flex;
   flex-direction: column;
@@ -1286,14 +1296,29 @@
   align-items: center;
   justify-content: space-around;
 }
-.entries__menus__singular__options__add, .entries__menus__singular__options__less {
+.entries__menus__singular__options__more, .entries__menus__singular__options__less {
   width: 60px;
+  cursor: pointer;
 }
 .entries__menus__singular__options__inp {
   width: 25%;
   margin: 0% 5%;
   border-radius: 5px;
   outline: none;
+}
+.entries__buy {
+  width: 20%;
+  padding: 2% 3%;
+  background-color: #951616;
+  color: #F5EFE6;
+  font-size: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.entries__buy:hover {
+  animation: buyButtonHover 0.6s;
+  background-color: #D4A50D;
+  color: #191919;
 }
 
 .aboutUs {

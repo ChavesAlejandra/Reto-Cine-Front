@@ -32,7 +32,10 @@ const fetchData = () =>
 
 const putFetchData = (seat, bool) =>
 {
-    fetch(`http://localhost:5030/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`, { method: 'PUT'})
+    fetch(`http://localhost:5030/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`,
+    {
+        method: 'PUT'
+    })
     .then(res => res.json())
     .then(data => console.log(data));
 }

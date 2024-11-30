@@ -64,14 +64,15 @@ const fetchData = () =>
     {
         categoryFilms = data;
         console.log(data);
-    });
-    
-    fetch('http://localhost:5030/session')
-    .then(res => res.json())
-    .then(data => {
-        sessions = data;
-        console.log(data);
-        printData(categoryFilms);
+    }).then(x =>
+    {
+        fetch('http://localhost:5030/session')
+        .then(res => res.json())
+        .then(data => {
+            sessions = data;
+            console.log(data);
+            printData(categoryFilms);
+        });
     });
 }
 

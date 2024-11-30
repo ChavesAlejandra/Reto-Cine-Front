@@ -3,6 +3,12 @@
 @use '../base/vars' as *;
 @use '../base/mixins' as *;
 
+@keyframes buyButtonHover
+{
+    0% { background-color: $buttonsBackColor; color: $elementsFontColor; }
+    100% { background-color: $buttonsHoverBackColor; color: $elementsHoverFontColor; }
+}
+
 .entries
 {
     display: flex;
@@ -103,7 +109,11 @@
                 align-items: center;
                 justify-content: space-around;
 
-                &__add, &__less { width: 60px; }
+                &__more, &__less
+                {
+                    width: 60px;
+                    cursor: pointer;
+                }
                 &__inp
                 {
                     width: 25%;
@@ -112,6 +122,23 @@
                     outline: none;
                 }
             }
+        }
+    }
+    &__buy
+    {
+        width: 20%;
+        padding: 2% 3%;
+        background-color: $buttonsBackColor;
+        color: $elementsFontColor;
+        font-size: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover
+        {
+            animation: buyButtonHover 0.6s;
+            background-color: $buttonsHoverBackColor;
+            color: $elementsHoverFontColor;
         }
     }
 }
