@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const dropDownMenu = Array.from(document.getElementsByClassName("dropDownMenu"))
     const dropDownInfo = Array.from(document.getElementsByClassName("dropDownInfo"))
     const dropPrincipalMenu = document.getElementsByClassName("dropPrincipalMenu")
-    const headerMenu = document.getElementsByClassName("header__menu")[0]
+    const headerMenu = document.getElementsByClassName("header__principalMenu")[0]
 
     dropDownMenu.forEach((el, index) => {
         el.addEventListener("click", () => {
@@ -20,9 +20,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         if (dropPrincipalMenu[0].style.visibility != "visible") {
             dropPrincipalMenu[0].style.visibility = "visible"
             dropPrincipalMenu[1].style.visibility = "visible"
+            dropPrincipalMenu[2].style.visibility = "visible"
         } else {
             dropPrincipalMenu[0].style.visibility = "hidden"
             dropPrincipalMenu[1].style.visibility = "hidden"
+            dropPrincipalMenu[2].style.visibility = "hidden"
         }
     })
 })

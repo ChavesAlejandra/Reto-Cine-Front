@@ -22,6 +22,12 @@
         color: $importantFontColor;
         padding: 2% 0% 3% 0%;
         font-size: 40px;
+
+        @media (min-width: 768px) { font-size: 50px; }
+
+        @media (min-width: 1024px) { font-size: 60px; }
+
+        @media (min-width: 1440px) { font-size: 70px; }
     }
 
     &__info
@@ -42,13 +48,37 @@
             {
                 font-size: 25px;
                 padding-bottom: 5%;
+
+                @media (min-width: 768px) { font-size: 35px; }
+
+                @media (min-width: 1024px) { font-size: 45px; }
+
+                @media (min-width: 1440px) { font-size: 55px; }
             }
-            &__date { font-size: 30px; }
+
+            &__date 
+            { 
+                font-size: 30px;
+
+                @media (min-width: 768px) { font-size: 40px; }
+
+                @media (min-width: 1024px) { font-size: 50px; }
+
+                @media (min-width: 1440px) { font-size: 60px; }
+            }
+
             &__room
             {
                 padding: 2% 0% 0% 0%;
                 font-size: 30px;
+
+                @media (min-width: 768px) { font-size: 40px; }
+
+                @media (min-width: 1024px) { font-size: 50px; }
+
+                @media (min-width: 1440px) { font-size: 60px; }
             }
+
             &__seats
             {
                 display: flex;
@@ -63,7 +93,14 @@
                     width: 100%;
                     padding: 5% 0%;
                     font-size: 25px;
+
+                    @media (min-width: 768px) { font-size: 35px; }
+
+                    @media (min-width: 1024px) { font-size: 45px; }
+
+                    @media (min-width: 1440px) { font-size: 55px; }
                 }
+
                 &__singular
                 {
                     width: 45%;
@@ -73,6 +110,12 @@
                     {
                         padding: 3% 0%;
                         font-size: 20px;
+
+                        @media (min-width: 768px) { font-size: 30px; }
+
+                        @media (min-width: 1024px) { font-size: 40px; }
+
+                        @media (min-width: 1440px) { font-size: 50px; }
                     }
                 }
             }
@@ -94,14 +137,32 @@
             padding: 5% 0% 7% 0%;
             font-size: 30px;
             color: $importantFontColor;
+
+            @media (min-width: 768px) { font-size: 40px; }
+
+            @media (min-width: 1024px) { font-size: 50px; }
+
+            @media (min-width: 1440px) { font-size: 60px; }
         }
+
         &__singular
         {
             width: 45%;
             text-align: center;
 
-            h3 { font-size: 25px; }
+            h3 
+            {
+                font-size: 25px;
+
+                @media (min-width: 768px) { font-size: 35px; }
+
+                @media (min-width: 1024px) { font-size: 45px; }
+
+                @media (min-width: 1440px) { font-size: 55px; }
+            }
+
             &__img { width: 150px; }
+
             &__options
             {
                 display: flex;
@@ -113,7 +174,14 @@
                 {
                     width: 60px;
                     cursor: pointer;
+
+                    @media (min-width: 768px) { width: 70px;}
+
+                    @media (min-width: 1024px) { width: 80px;}
+
+                    @media (min-width: 1440px) { width: 90px;}
                 }
+
                 &__inp
                 {
                     width: 25%;
@@ -130,7 +198,7 @@
         padding: 2% 3%;
         background-color: $buttonsBackColor;
         color: $elementsFontColor;
-        font-size: 30px;
+        font-size: 20px;
         border-radius: 5px;
         cursor: pointer;
 
@@ -140,5 +208,15 @@
             background-color: $buttonsHoverBackColor;
             color: $elementsHoverFontColor;
         }
+
+        @media (min-width: 768px) 
+        { 
+            width: 25%;
+            font-size: 30px;
+        }
+
+        @media (min-width: 1024px) { font-size: 40px; }
+
+        @media (min-width: 1440px) { font-size: 50px; }
     }
 }

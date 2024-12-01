@@ -1220,6 +1220,21 @@
   padding: 2% 0% 3% 0%;
   font-size: 40px;
 }
+@media (min-width: 768px) {
+  .entries__filmTitle {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__filmTitle {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__filmTitle {
+    font-size: 70px;
+  }
+}
 .entries__info {
   flex-direction: row;
   text-align: center;
@@ -1238,12 +1253,57 @@
   font-size: 25px;
   padding-bottom: 5%;
 }
+@media (min-width: 768px) {
+  .entries__info__ticket__id {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__id {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__id {
+    font-size: 55px;
+  }
+}
 .entries__info__ticket__date {
   font-size: 30px;
+}
+@media (min-width: 768px) {
+  .entries__info__ticket__date {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__date {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__date {
+    font-size: 60px;
+  }
 }
 .entries__info__ticket__room {
   padding: 2% 0% 0% 0%;
   font-size: 30px;
+}
+@media (min-width: 768px) {
+  .entries__info__ticket__room {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__room {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__room {
+    font-size: 60px;
+  }
 }
 .entries__info__ticket__seats {
   display: flex;
@@ -1258,6 +1318,21 @@
   padding: 5% 0%;
   font-size: 25px;
 }
+@media (min-width: 768px) {
+  .entries__info__ticket__seats__title {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__seats__title {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__seats__title {
+    font-size: 55px;
+  }
+}
 .entries__info__ticket__seats__singular {
   width: 45%;
   margin: 0% 1.5%;
@@ -1265,6 +1340,21 @@
 .entries__info__ticket__seats__singular p {
   padding: 3% 0%;
   font-size: 20px;
+}
+@media (min-width: 768px) {
+  .entries__info__ticket__seats__singular p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__seats__singular p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__seats__singular p {
+    font-size: 50px;
+  }
 }
 .entries__menus {
   display: flex;
@@ -1280,12 +1370,42 @@
   font-size: 30px;
   color: #F5EFE6;
 }
+@media (min-width: 768px) {
+  .entries__menus h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__menus h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus h2 {
+    font-size: 60px;
+  }
+}
 .entries__menus__singular {
   width: 45%;
   text-align: center;
 }
 .entries__menus__singular h3 {
   font-size: 25px;
+}
+@media (min-width: 768px) {
+  .entries__menus__singular h3 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__menus__singular h3 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus__singular h3 {
+    font-size: 55px;
+  }
 }
 .entries__menus__singular__img {
   width: 150px;
@@ -1300,6 +1420,21 @@
   width: 60px;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .entries__menus__singular__options__more, .entries__menus__singular__options__less {
+    width: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__menus__singular__options__more, .entries__menus__singular__options__less {
+    width: 80px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus__singular__options__more, .entries__menus__singular__options__less {
+    width: 90px;
+  }
+}
 .entries__menus__singular__options__inp {
   width: 25%;
   margin: 0% 5%;
@@ -1311,7 +1446,7 @@
   padding: 2% 3%;
   background-color: #951616;
   color: #F5EFE6;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -1319,6 +1454,22 @@
   animation: buyButtonHover 0.6s;
   background-color: #D4A50D;
   color: #191919;
+}
+@media (min-width: 768px) {
+  .entries__buy {
+    width: 25%;
+    font-size: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__buy {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__buy {
+    font-size: 50px;
+  }
 }
 
 .aboutUs {
@@ -1736,178 +1887,190 @@ img {
     width: 300px;
   }
 }
-.header__menu {
+.header__principalMenu {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 75px;
 }
 @media (min-width: 1024px) {
-  .header__menu {
+  .header__principalMenu {
     display: none;
   }
 }
-.header__menu__list {
-  display: flex;
+.header__principalMenu__list {
+  visibility: hidden;
   flex-direction: column;
   position: absolute;
   top: 95%;
+  background-color: rgba(25, 25, 25, 0.7882352941);
 }
-.header__menu__list__categories {
+.header__principalMenu__list:hover {
+  background-color: rgba(212, 165, 13, 0.7058823529);
+}
+.header__principalMenu__list__categories {
   visibility: hidden;
   font-size: 25px;
   color: #F5EFE6;
 }
-.header__menu__list__categories__title {
+.header__principalMenu__list__categories__title {
   cursor: pointer;
 }
-.header__menu__list__categories__title:hover {
+.header__principalMenu__list__categories__title:hover {
   color: #D4A50D;
 }
-.header__menu__list__categories__list {
+.header__principalMenu__list__categories__list {
   display: flex;
   flex-direction: column;
-  background-color: rgba(25, 25, 25, 0.6588235294);
   font-size: 20px;
 }
-.header__menu__list__categories__list li {
+.header__principalMenu__list__categories__list li a {
+  color: #F5EFE6;
   cursor: pointer;
 }
-.header__menu__list__categories__list li:hover {
+.header__principalMenu__list__categories__list li a:hover {
+  color: #D4A50D;
   background-color: rgba(212, 165, 13, 0.7058823529);
-  color: #191919;
 }
 @media (min-width: 1440px) {
-  .header__menu__list__categories__list {
+  .header__principalMenu__list__categories__list {
     font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
-  .header__menu__list__categories {
+  .header__principalMenu__list__categories {
     font-size: 65px;
   }
 }
-.header__menu__list__info {
+.header__principalMenu__list__info {
   visibility: hidden;
   font-size: 25px;
   color: #F5EFE6;
 }
-.header__menu__list__info__title {
+.header__principalMenu__list__info__title {
   cursor: pointer;
 }
-.header__menu__list__info__title:hover {
+.header__principalMenu__list__info__title:hover {
   color: #D4A50D;
 }
-.header__menu__list__info__list {
+.header__principalMenu__list__info__list {
   display: flex;
   flex-direction: column;
-  background-color: rgba(25, 25, 25, 0.6588235294);
+  background-color: rgba(25, 25, 25, 0.7882352941);
   font-size: 20px;
 }
-.header__menu__list__info__list li {
+.header__principalMenu__list__info__list li a {
+  color: #F5EFE6;
   cursor: pointer;
 }
-.header__menu__list__info__list li:hover {
+.header__principalMenu__list__info__list li a:hover {
+  color: #D4A50D;
   background-color: rgba(212, 165, 13, 0.7058823529);
-  color: #191919;
 }
 @media (min-width: 1440px) {
-  .header__menu__list__info__list {
+  .header__principalMenu__list__info__list {
     font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
-  .header__menu__list__info {
+  .header__principalMenu__list__info {
     font-size: 65px;
   }
 }
-.header #menu {
+.header__menu {
   display: none;
+  position: relative;
   width: 50%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 @media (min-width: 1024px) {
-  .header #menu {
+  .header__menu {
     display: flex;
   }
 }
-.header #menu__categories {
+.header__menu__categories {
   visibility: hidden;
   font-size: 55px;
   color: #F5EFE6;
 }
 @media (min-width: 1024px) {
-  .header #menu__categories {
+  .header__menu__categories {
     visibility: visible;
   }
 }
-.header #menu__categories__title {
+.header__menu__categories__title {
   cursor: pointer;
 }
-.header #menu__categories__title:hover {
+.header__menu__categories__title:hover {
   color: #D4A50D;
 }
-.header #menu__categories__list {
+.header__menu__categories__list {
   visibility: hidden;
+  position: absolute;
+  top: 110%;
   flex-direction: column;
-  background-color: rgba(25, 25, 25, 0.6588235294);
+  background-color: rgba(25, 25, 25, 0.7882352941);
   font-size: 40px;
 }
-.header #menu__categories__list li {
+.header__menu__categories__list li a {
+  color: #F5EFE6;
   cursor: pointer;
 }
-.header #menu__categories__list li:hover {
+.header__menu__categories__list li a:hover {
+  color: #D4A50D;
   background-color: rgba(212, 165, 13, 0.7058823529);
-  color: #191919;
 }
 @media (min-width: 1440px) {
-  .header #menu__categories__list {
+  .header__menu__categories__list {
     font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
-  .header #menu__categories {
+  .header__menu__categories {
     font-size: 65px;
   }
 }
-.header #menu__info {
+.header__menu__info {
   visibility: hidden;
   font-size: 55px;
   color: #F5EFE6;
 }
 @media (min-width: 1024px) {
-  .header #menu__info {
+  .header__menu__info {
     visibility: visible;
   }
 }
-.header #menu__info__title {
+.header__menu__info__title {
   cursor: pointer;
 }
-.header #menu__info__title:hover {
+.header__menu__info__title:hover {
   color: #D4A50D;
 }
-.header #menu__info__list {
+.header__menu__info__list {
   visibility: hidden;
+  position: absolute;
+  top: 110%;
   flex-direction: column;
-  background-color: rgba(25, 25, 25, 0.6588235294);
+  background-color: rgba(25, 25, 25, 0.7882352941);
   font-size: 40px;
 }
-.header #menu__info__list li {
+.header__menu__info__list li a {
+  color: #F5EFE6;
   cursor: pointer;
 }
-.header #menu__info__list li:hover {
+.header__menu__info__list li a:hover {
+  color: #D4A50D;
   background-color: rgba(212, 165, 13, 0.7058823529);
-  color: #191919;
 }
 @media (min-width: 1440px) {
-  .header #menu__info__list {
+  .header__menu__info__list {
     font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
-  .header #menu__info {
+  .header__menu__info {
     font-size: 65px;
   }
 }

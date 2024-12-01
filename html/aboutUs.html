@@ -25,26 +25,53 @@
     <header class="header">
         <div class="header__logo"><a href="./home.html"><img src="../Images/logo.png" alt="logo"></a></div>
 
-        <div class="header__menu"><img src="../Images/Icons/menu_blanco.png" alt="Menu"></div>
+        <div id="principalMenu" class="header__principalMenu" >
 
-        <div class="header__categories">
-            <h1 class="header__categories__title">Categories</h1>
-            <ul class="header__categories__list">
-                <li>Animation</li>
-                <li>Horror</li>
-                <li>Romantic</li>
-                <li>Science Fiction</li>
-            </ul>
+            <div class="header__principalMenu__menu"><img src="../Images/Icons/menu_blanco.png" alt="Menu"></div>
+
+            <div class="header__principalMenu__list dropPrincipalMenu">
+                <div class="header__principalMenu__list__categories dropPrincipalMenu">
+                    <h1 class="header__principalMenu__list__categories__title">Categories</h1>
+                    <ul class="header__principalMenu__list__categories__list">
+                        <li><a href="./category.html?cat=animation">Animation</a></li>
+                        <li><a href="./category.html?cat=horror">Horror</a></li>
+                        <li><a href="./category.html?cat=romantic">Romantic</a></li>
+                        <li><a href="./category.html?cat=sciFi">Science Fiction</a></li>
+                    </ul>
+                </div>
+        
+                <div class="header__principalMenu__list__info dropPrincipalMenu">
+                    <h1 class="header__principalMenu__list__info__title">Information</h1>
+                    <ul class="header__principalMenu__list__info__list">
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="premiumRoom.html">Premium Room</a></li>
+                        <li><a href="legalNotice.html">Legal Notice</a></li>
+                        <li><a href="terms.html">Terms and conditions of purchase</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="header__info">
-            <h1 class="header__info__title">Information</h1>
-            <ul class="header__info__list">
-                <li>About Us</li>
-                <li>Premium Room</li>
-                <li>Legal Notice</li>
-                <li>Terms and conditions of purchase</li>
-            </ul>
+        <div id="menu" class="header__menu">
+            <div class="header__menu__categories">
+                <h1 class="header__menu__categories__title dropDownMenu">Categories</h1>
+                <ul class="header__menu__categories__list dropDownInfo">
+                    <li><a href="./category.html?cat=animation">Animation</a></li>
+                    <li><a href="./category.html?cat=horror">Horror</a></li>
+                    <li><a href="./category.html?cat=romantic">Romantic</a></li>
+                    <li><a href="./category.html?cat=sciFi">Science Fiction</a></li>
+                </ul>
+            </div>
+    
+            <div class="header__menu__info">
+                <h1 class="header__menu__info__title dropDownMenu">Information</h1>
+                <ul class="header__menu__info__list dropDownInfo">
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="premiumRoom.html">Premium Room</a></li>
+                    <li><a href="legalNotice.html">Legal Notice</a></li>
+                    <li><a href="terms.html">Terms and conditions of purchase</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <article>
