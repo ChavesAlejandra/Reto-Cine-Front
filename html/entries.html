@@ -95,17 +95,27 @@
             <span class="entries__buy__price"></span>
         </button>
         <section class="entries__popUp">
+            <div class="entries__popUp__close"><img src="../Images/Icons/close_blanco.png" alt="close"></div>
             <h2>Payment Data</h2>
             <form id="paymentForm">
                 <div>
                     <label for="paymentFirstName">First Name:</label>
-                    <input type="text" name="name" id="paymentFirstName">
+                    <input type="text" name="firstName" id="paymentFirstName" required>
                 </div>
                 <div>
                     <label for="paymentLastName">Last Name:</label>
-                    <input type="text" name="name" id="paymentLastName">
+                    <input type="text" name="lastName" id="paymentLastName" required>
                 </div>
-            </form>
+                <div>
+                    <label for="paymentIban">IBAN:</label>
+                    <input type="text" name="IABN" id="paymentIban" maxlength="15" required>
+                </div>
+                <div>
+                    <label for="paymentCsv">CSV:</label>
+                    <input type="text" name="CSV" id="paymentIban" maxlength="3" required>
+                </div>
+            <button type="button">Confirm Payment</button>
+        </form>
         </section>
     </article>
     <footer class="footer">

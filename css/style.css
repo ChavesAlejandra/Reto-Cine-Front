@@ -1472,15 +1472,27 @@
   }
 }
 .entries__popUp {
-  display: flex;
+  display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   width: 80%;
-  height: 60%;
+  height: 50%;
   background-color: #951616;
   color: #D4D4D4;
+  border-radius: 5px;
+  z-index: 10;
+}
+.entries__popUp__close {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  width: 50px;
+  cursor: pointer;
 }
 .entries__popUp h2 {
   font-size: 40px;
@@ -1498,15 +1510,26 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2% 0%;
+  padding: 3% 0%;
   width: 100%;
 }
 .entries__popUp form div label {
   width: 25%;
+  font-family: "Quintessential";
 }
 .entries__popUp form div input {
   width: 65%;
   border-radius: 5px;
+  font-family: "Quintessential";
+}
+.entries__popUp form button {
+  padding: 4% 5%;
+  margin-top: 5%;
+  background-color: #AFAFAF;
+  border-radius: 5px;
+  font-family: "Tangerine";
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .aboutUs {

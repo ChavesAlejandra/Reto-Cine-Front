@@ -5,10 +5,63 @@ let menuCount = 0;
 let menuSpecificCount = [];
 
 document.addEventListener('DOMContentLoaded', () => {
-    const x = 0;
+    const buyPopUp = document.getElementsByClassName('entries__popUp')[0];
+    const form = document.getElementById('paymentForm');
+    const formInp = Array.from(form.getElementsByTagName('input'));
+    const submitForm = form.getElementsByTagName('button')[0];
 
     document.getElementsByClassName('entries__buy')[0].addEventListener('click', () => {
-        putFetchData();
+        putMenusFetchData();
+
+        document.getElementsByTagName('header')[0].style.opacity = 0.8;
+        document.getElementsByTagName('footer')[0].style.opacity = 0.8;
+        Array.from(document.getElementsByTagName('section')).forEach(el => { if (!el.classList.contains('entries__popUp')) { el.style.opacity = 0.8 } });
+        document.body.style.pointerEvents = 'none';
+        document.body.style.overflow = 'hidden';
+        buyPopUp.style.pointerEvents = 'all';
+        buyPopUp.style.display = 'flex';
+    });
+    
+    buyPopUp.children[0].addEventListener('click', () => {
+        document.getElementsByTagName('header')[0].style.opacity = 1;
+        document.getElementsByTagName('footer')[0].style.opacity = 1;
+        Array.from(document.getElementsByTagName('section')).forEach(el => { el.style.opacity = 1 });
+        document.body.style.pointerEvents = 'all';
+        document.body.style.overflow = 'visible';
+        buyPopUp.style.pointerEvents = 'all';
+        buyPopUp.style.display = 'none';
+    });
+
+    formInp.forEach(el =>
+    {
+        el.addEventListener('change', () => {
+            let requiredFilled = false;
+
+            if (formInp[0].value.length < 1 || formInp[1].value.length < 1 || formInp[2].value.length < 13 || formInp[3].value.length < 3) { requiredFilled = false; }
+            else { requiredFilled = true; }
+
+            if (requiredFilled)
+            {
+                submitForm.disabled = false;
+                submitForm.style.backgroundColor = '#D4A50D';
+            }
+            else
+            {
+                submitForm.disabled = false;
+                submitForm.style.backgroundColor = '#AFAFAF';
+            }
+        });
+    });
+
+    submitForm.addEventListener('click', () => {
+        if (!submitForm.disabled)
+        {
+            putUserFetchData(formInp[0].value, formInp[1].value, formInp[2].value, formInp[3].value);
+            alert('Your operation has been succesfully completed');
+            const a = document.createElement('a');
+            a.href = './home.html';
+            a.click();
+        }
     });
 
     fetchData();
@@ -37,7 +90,7 @@ const fetchData = () =>
     });
 }
 
-const putFetchData = () =>
+const putMenusFetchData = () =>
 {
     const putData = [];
     
@@ -58,6 +111,21 @@ const putFetchData = () =>
     .then(res => res.json())
     .then(data => console.log(data));
 }
+
+const putUserFetchData = (firstName, lastName, iban, csv) =>
+    {
+        const putData = firstName.concat('-').concat(lastName).concat('-').concat(iban).concat('-').concat(csv);
+        
+    
+        fetch(`http://localhost:5030/ticket/id/${ticket._id}/user`,
+        {
+            method: 'PUT',
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(putData)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
+    }
 
 const printData = (data) =>
 {
@@ -152,6 +220,7 @@ const menuCountUpdate = () =>
     const totalPriceText = document.getElementsByClassName('entries__buy__price')[0];
     let totalPrice = 0;
     ticket._seats.forEach(el => totalPrice += el._price);
+    ticket._menus.forEach(el => totalPrice += el._price);
     menuCount = 0;
     menuSpecificCount.forEach((el, index) =>
     {
