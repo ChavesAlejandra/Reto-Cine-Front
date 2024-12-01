@@ -1062,7 +1062,7 @@
   border-radius: 5px;
   margin-top: 5%;
   padding: 2%;
-  width: 35%;
+  width: 45%;
   display: flex;
   flex-direction: column;
 }
@@ -1075,7 +1075,7 @@
 .seats__guidePrice__normal {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 .seats__guidePrice__normal h1 {
@@ -1083,10 +1083,9 @@
 }
 .seats__guidePrice__normal h3 {
   font-size: 15px;
-  padding: 3%;
 }
 .seats__guidePrice__normal div {
-  width: 35%;
+  width: 25%;
 }
 @media (min-width: 768px) {
   .seats__guidePrice__normal h1 {
@@ -1098,10 +1097,10 @@
 }
 @media (min-width: 1024px) {
   .seats__guidePrice__normal h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .seats__guidePrice__normal h3 {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1440px) {
@@ -1111,14 +1110,11 @@
   .seats__guidePrice__normal h3 {
     font-size: 45px;
   }
-  .seats__guidePrice__normal div {
-    width: 25%;
-  }
 }
 .seats__guidePrice__vip {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 .seats__guidePrice__vip h1 {
@@ -1126,10 +1122,9 @@
 }
 .seats__guidePrice__vip h3 {
   font-size: 15px;
-  padding: 3%;
 }
 .seats__guidePrice__vip div {
-  width: 35%;
+  width: 25%;
 }
 @media (min-width: 768px) {
   .seats__guidePrice__vip h1 {
@@ -1141,10 +1136,10 @@
 }
 @media (min-width: 1024px) {
   .seats__guidePrice__vip h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .seats__guidePrice__vip h3 {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1440px) {
@@ -1154,14 +1149,11 @@
   .seats__guidePrice__vip h3 {
     font-size: 45px;
   }
-  .seats__guidePrice__vip div {
-    width: 25%;
-  }
 }
 .seats__guidePrice__disabled {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
 }
 .seats__guidePrice__disabled h1 {
@@ -1169,10 +1161,9 @@
 }
 .seats__guidePrice__disabled h3 {
   font-size: 15px;
-  padding: 3%;
 }
 .seats__guidePrice__disabled div {
-  width: 35%;
+  width: 25%;
 }
 @media (min-width: 768px) {
   .seats__guidePrice__disabled h1 {
@@ -1184,10 +1175,10 @@
 }
 @media (min-width: 1024px) {
   .seats__guidePrice__disabled h1 {
-    font-size: 40px;
+    font-size: 35px;
   }
   .seats__guidePrice__disabled h3 {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1440px) {
@@ -1196,9 +1187,6 @@
   }
   .seats__guidePrice__disabled h3 {
     font-size: 45px;
-  }
-  .seats__guidePrice__disabled div {
-    width: 25%;
   }
 }
 .seats__buy {

@@ -360,7 +360,7 @@
         border-radius: 5px;
         margin-top: 5%;
         padding: 2%;
-        width: 35%;
+        width: 45%;
         display: flex;
         flex-direction: column;
 
@@ -374,15 +374,11 @@
         {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: row;
             h1{ font-size: 20px; }
-            h3
-            {
-                font-size: 15px;
-                padding: 3%;
-            }
-            div{width: 35%;}
+            h3 { font-size: 15px; }
+            div{width: 25%;}
             
             @media (min-width: 768px) 
             {
@@ -392,15 +388,14 @@
 
             @media (min-width: 1024px) 
             { 
-                h1{ font-size: 40px; }
-                h3{font-size: 35px;} 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
             }
 
             @media (min-width: 1440px) 
             { 
                 h1{ font-size: 50px; }
                 h3{font-size: 45px;}
-                div{width: 25%;}
             }
         }
 
@@ -408,15 +403,11 @@
         {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: row;
             h1{ font-size: 20px; }
-            h3
-            {
-                font-size: 15px;
-                padding: 3%;
-            }
-            div{width: 35%;}
+            h3 { font-size: 15px; }
+            div{width: 25%;}
             
             @media (min-width: 768px) 
             {
@@ -426,15 +417,14 @@
 
             @media (min-width: 1024px) 
             { 
-                h1{ font-size: 40px; }
-                h3{font-size: 35px;} 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
             }
 
             @media (min-width: 1440px) 
             { 
                 h1{ font-size: 50px; }
                 h3{font-size: 45px;}
-                div{width: 25%;}
             }
         }
 
@@ -442,15 +432,11 @@
         {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             flex-direction: row;
             h1{ font-size: 20px; }
-            h3
-            {
-                font-size: 15px;
-                padding: 3%;
-            }
-            div{width: 35%;}
+            h3 { font-size: 15px; }
+            div{width: 25%;}
             
             @media (min-width: 768px) 
             {
@@ -460,15 +446,14 @@
 
             @media (min-width: 1024px) 
             { 
-                h1{ font-size: 40px; }
-                h3{font-size: 35px;} 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
             }
 
             @media (min-width: 1440px) 
             { 
                 h1{ font-size: 50px; }
                 h3{font-size: 45px;}
-                div{width: 25%;}
             }
         }
     }
