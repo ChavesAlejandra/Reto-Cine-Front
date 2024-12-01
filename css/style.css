@@ -519,8 +519,8 @@
   flex-direction: column;
 }
 .seats__route {
-  margin-right: 50%;
-  padding: 2% 0;
+  width: 100%;
+  padding: 2% 0 2% 2%;
   font-weight: bolder;
   font-size: 30px;
 }
@@ -1055,6 +1055,138 @@
   }
   .seats__guide__disabled div {
     width: 25%;
+  }
+}
+.seats__guidePrice {
+  background-color: #191919;
+  border-radius: 5px;
+  margin-top: 5%;
+  padding: 2%;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .seats__guidePrice {
+    flex-direction: row;
+    width: 75%;
+  }
+}
+.seats__guidePrice__normal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.seats__guidePrice__normal h1 {
+  font-size: 20px;
+}
+.seats__guidePrice__normal h3 {
+  font-size: 15px;
+}
+.seats__guidePrice__normal div {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .seats__guidePrice__normal h1 {
+    font-size: 30px;
+  }
+  .seats__guidePrice__normal h3 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guidePrice__normal h1 {
+    font-size: 35px;
+  }
+  .seats__guidePrice__normal h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guidePrice__normal h1 {
+    font-size: 50px;
+  }
+  .seats__guidePrice__normal h3 {
+    font-size: 45px;
+  }
+}
+.seats__guidePrice__vip {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.seats__guidePrice__vip h1 {
+  font-size: 20px;
+}
+.seats__guidePrice__vip h3 {
+  font-size: 15px;
+}
+.seats__guidePrice__vip div {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .seats__guidePrice__vip h1 {
+    font-size: 30px;
+  }
+  .seats__guidePrice__vip h3 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guidePrice__vip h1 {
+    font-size: 35px;
+  }
+  .seats__guidePrice__vip h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guidePrice__vip h1 {
+    font-size: 50px;
+  }
+  .seats__guidePrice__vip h3 {
+    font-size: 45px;
+  }
+}
+.seats__guidePrice__disabled {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.seats__guidePrice__disabled h1 {
+  font-size: 20px;
+}
+.seats__guidePrice__disabled h3 {
+  font-size: 15px;
+}
+.seats__guidePrice__disabled div {
+  width: 25%;
+}
+@media (min-width: 768px) {
+  .seats__guidePrice__disabled h1 {
+    font-size: 30px;
+  }
+  .seats__guidePrice__disabled h3 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .seats__guidePrice__disabled h1 {
+    font-size: 35px;
+  }
+  .seats__guidePrice__disabled h3 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .seats__guidePrice__disabled h1 {
+    font-size: 50px;
+  }
+  .seats__guidePrice__disabled h3 {
+    font-size: 45px;
   }
 }
 .seats__buy {
@@ -1923,10 +2055,6 @@ img {
   width: 100%;
 }
 
-input {
-  outline: none;
-}
-
 .header {
   display: flex;
   justify-content: space-around;
@@ -1940,7 +2068,6 @@ input {
 }
 .header__logo {
   width: 200px;
-  cursor: pointer;
 }
 @media (min-width: 1024px) {
   .header__logo {
@@ -1963,18 +2090,12 @@ input {
     display: none;
   }
 }
-.header__principalMenu__menu {
-  cursor: pointer;
-}
 .header__principalMenu__list {
   visibility: hidden;
   flex-direction: column;
   position: absolute;
   top: 95%;
   background-color: rgba(25, 25, 25, 0.7882352941);
-}
-.header__principalMenu__list:hover {
-  background-color: rgba(212, 165, 13, 0.7058823529);
 }
 .header__principalMenu__list__categories {
   visibility: hidden;
@@ -1984,9 +2105,6 @@ input {
 .header__principalMenu__list__categories__title {
   cursor: pointer;
 }
-.header__principalMenu__list__categories__title:hover {
-  color: #D4A50D;
-}
 .header__principalMenu__list__categories__list {
   display: flex;
   flex-direction: column;
@@ -1995,10 +2113,6 @@ input {
 .header__principalMenu__list__categories__list li a {
   color: #F5EFE6;
   cursor: pointer;
-}
-.header__principalMenu__list__categories__list li a:hover {
-  color: #D4A50D;
-  background-color: rgba(212, 165, 13, 0.7058823529);
 }
 @media (min-width: 1440px) {
   .header__principalMenu__list__categories__list {
@@ -2018,9 +2132,6 @@ input {
 .header__principalMenu__list__info__title {
   cursor: pointer;
 }
-.header__principalMenu__list__info__title:hover {
-  color: #D4A50D;
-}
 .header__principalMenu__list__info__list {
   display: flex;
   flex-direction: column;
@@ -2030,10 +2141,6 @@ input {
 .header__principalMenu__list__info__list li a {
   color: #F5EFE6;
   cursor: pointer;
-}
-.header__principalMenu__list__info__list li a:hover {
-  color: #D4A50D;
-  background-color: rgba(212, 165, 13, 0.7058823529);
 }
 @media (min-width: 1440px) {
   .header__principalMenu__list__info__list {
@@ -2087,7 +2194,7 @@ input {
   cursor: pointer;
 }
 .header__menu__categories__list li a:hover {
-  color: #D4A50D;
+  color: #191919;
   background-color: rgba(212, 165, 13, 0.7058823529);
 }
 @media (min-width: 1440px) {
@@ -2129,7 +2236,7 @@ input {
   cursor: pointer;
 }
 .header__menu__info__list li a:hover {
-  color: #D4A50D;
+  color: #191919;
   background-color: rgba(212, 165, 13, 0.7058823529);
 }
 @media (min-width: 1440px) {
