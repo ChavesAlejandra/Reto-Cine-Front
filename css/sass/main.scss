@@ -15,7 +15,6 @@
 @use '../sass/layout/terms.scss' as *;
 
 img { width: 100%; }
-input { outline: none; }
 
 .header
 {
@@ -32,7 +31,6 @@ input { outline: none; }
     &__logo 
     {
         width: 200px;
-        cursor: pointer;
         @media (min-width: 1024px) { width: 250px; }
         @media (min-width: 1440px) { width: 300px; }
     }
@@ -45,8 +43,6 @@ input { outline: none; }
        width: 75px;
        @media (min-width: 1024px) { display: none;}
 
-       &__menu { cursor: pointer; }
-
        &__list
        {
         visibility: hidden;
@@ -54,7 +50,6 @@ input { outline: none; }
         position: absolute;
         top: 95%;
         background-color: $menusBackColor;
-        &:hover{background-color: $menusHoverBackColor;}
 
         &__categories
         {
@@ -62,11 +57,7 @@ input { outline: none; }
         font-size: 25px;
         color: $importantFontColor;
 
-        &__title
-        {
-            cursor: pointer;
-            &:hover{color: $buttonsHoverBackColor;}
-        }
+        &__title { cursor: pointer; }
 
         &__list
         {
@@ -78,11 +69,6 @@ input { outline: none; }
             {
                 color: $importantFontColor;
                 cursor: pointer;
-                &:hover
-                { 
-                    color: $liHoverFontColor;
-                    background-color: $menusHoverBackColor; 
-                }
             }
             
             @media (min-width: 1440px) { font-size: 50px; }
@@ -97,11 +83,7 @@ input { outline: none; }
             font-size: 25px;
             color: $importantFontColor;
 
-            &__title
-            {
-                cursor: pointer;
-                &:hover{color: $buttonsHoverBackColor;}
-            }
+            &__title { cursor: pointer; }
 
             &__list
             {
@@ -114,12 +96,6 @@ input { outline: none; }
             {
                 color: $importantFontColor;
                 cursor: pointer;
-                &:hover
-                { 
-                    color: $liHoverFontColor;
-                    background-color: $menusHoverBackColor;
-                }
-
             }
                 @media (min-width: 1440px) { font-size: 50px; }
             }

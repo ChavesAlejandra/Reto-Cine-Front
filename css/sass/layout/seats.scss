@@ -17,8 +17,8 @@
 
     &__route 
     {
-        margin-right: 50%;
-        padding: 2% 0;
+        width: 100%;
+        padding: 2% 0 2% 2%;
         font-weight: bolder;
         font-size: 30px;
 
@@ -350,6 +350,121 @@
             { 
                 font-size: 50px;
                 div{width: 25%;}
+            }
+        }
+    }
+
+    &__guidePrice
+    {
+        background-color: $divsBackColor;
+        border-radius: 5px;
+        margin-top: 5%;
+        padding: 2%;
+        width: 75%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-areas: 
+        "vip . dis"
+        ". nml .";
+        align-items: center;
+        justify-content: center;
+
+        &__normal
+        {
+            grid-area: nml;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3
+            {
+                font-size: 15px;
+                padding: 3%;
+            }
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 40px; }
+                h3{font-size: 35px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
+            }
+        }
+
+        &__vip
+        {
+            grid-area: vip;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3
+            {
+                font-size: 15px;
+                padding: 3%;
+            }
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 40px; }
+                h3{font-size: 35px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
+            }
+        }
+
+        &__disabled
+        {
+            grid-area: dis;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3
+            {
+                font-size: 15px;
+                padding: 3%;
+            }
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 40px; }
+                h3{font-size: 35px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
             }
         }
     }
