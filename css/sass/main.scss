@@ -15,6 +15,7 @@
 @use '../sass/layout/terms.scss' as *;
 
 img { width: 100%; }
+input { outline: none; }
 
 .header
 {
@@ -31,6 +32,7 @@ img { width: 100%; }
     &__logo 
     {
         width: 200px;
+        cursor: pointer;
         @media (min-width: 1024px) { width: 250px; }
         @media (min-width: 1440px) { width: 300px; }
     }
@@ -42,6 +44,8 @@ img { width: 100%; }
        position: relative;
        width: 75px;
        @media (min-width: 1024px) { display: none;}
+
+       &__menu { cursor: pointer; }
 
        &__list
        {
@@ -113,7 +117,7 @@ img { width: 100%; }
                 &:hover
                 { 
                     color: $liHoverFontColor;
-                    background-color: $menusHoverBackColor; 
+                    background-color: $menusHoverBackColor;
                 }
 
             }
