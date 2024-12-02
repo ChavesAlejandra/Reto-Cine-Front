@@ -1375,117 +1375,136 @@
   padding: 3% 2%;
   border-radius: 5px;
 }
+@media (min-width: 768px) {
+  .entries__info {
+    width: 80%;
+  }
+}
 .entries__info__filmImg {
   width: 30%;
+  border-radius: 5px;
+}
+.entries__info__filmImg img {
+  border-radius: 5px;
 }
 .entries__info__ticket {
   width: 65%;
 }
 .entries__info__ticket__id {
-  font-size: 25px;
-  padding-bottom: 5%;
-}
-@media (min-width: 768px) {
-  .entries__info__ticket__id {
-    font-size: 35px;
-  }
-}
-@media (min-width: 1024px) {
-  .entries__info__ticket__id {
-    font-size: 45px;
-  }
-}
-@media (min-width: 1440px) {
-  .entries__info__ticket__id {
-    font-size: 55px;
-  }
-}
-.entries__info__ticket__date {
   font-size: 30px;
+  padding-bottom: 2%;
+  color: #D4A50D;
 }
 @media (min-width: 768px) {
-  .entries__info__ticket__date {
+  .entries__info__ticket__id {
     font-size: 40px;
   }
 }
 @media (min-width: 1024px) {
-  .entries__info__ticket__date {
+  .entries__info__ticket__id {
     font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
-  .entries__info__ticket__date {
+  .entries__info__ticket__id {
     font-size: 60px;
+  }
+}
+.entries__info__ticket__date {
+  font-size: 15px;
+  font-family: "Quintessential";
+}
+@media (min-width: 768px) {
+  .entries__info__ticket__date {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__info__ticket__date {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__info__ticket__date {
+    font-size: 40px;
   }
 }
 .entries__info__ticket__room {
   padding: 2% 0% 0% 0%;
-  font-size: 30px;
+  font-size: 15px;
+  font-family: "Quintessential";
 }
 @media (min-width: 768px) {
   .entries__info__ticket__room {
-    font-size: 40px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1024px) {
   .entries__info__ticket__room {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 @media (min-width: 1440px) {
   .entries__info__ticket__room {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 .entries__info__ticket__seats {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 100%;
 }
 .entries__info__ticket__seats__title {
   width: 100%;
-  padding: 5% 0%;
-  font-size: 25px;
+  font-size: 30px;
+  padding: 3% 0 1% 0;
+  color: #D4A50D;
 }
 @media (min-width: 768px) {
   .entries__info__ticket__seats__title {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 @media (min-width: 1024px) {
   .entries__info__ticket__seats__title {
-    font-size: 45px;
+    font-size: 50px;
   }
 }
 @media (min-width: 1440px) {
   .entries__info__ticket__seats__title {
-    font-size: 55px;
+    font-size: 60px;
   }
 }
 .entries__info__ticket__seats__singular {
-  width: 45%;
+  width: 80%;
   margin: 0% 1.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .entries__info__ticket__seats__singular p {
-  padding: 3% 0%;
-  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+  font-size: 15px;
+  font-family: "Quintessential";
 }
 @media (min-width: 768px) {
+  .entries__info__ticket__seats__singular p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
   .entries__info__ticket__seats__singular p {
     font-size: 30px;
   }
 }
-@media (min-width: 1024px) {
-  .entries__info__ticket__seats__singular p {
-    font-size: 40px;
-  }
-}
 @media (min-width: 1440px) {
   .entries__info__ticket__seats__singular p {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 .entries__menus {
@@ -1498,7 +1517,7 @@
 .entries__menus h2 {
   text-align: center;
   width: 100%;
-  padding: 5% 0% 7% 0%;
+  padding: 3% 0% 2% 0%;
   font-size: 30px;
   color: #F5EFE6;
 }
@@ -1520,36 +1539,101 @@
 .entries__menus__singular {
   width: 45%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3%;
+}
+@media (min-width: 768px) {
+  .entries__menus__singular {
+    width: 50%;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus__singular {
+    width: 33%;
+  }
 }
 .entries__menus__singular h3 {
-  font-size: 25px;
+  font-size: 15px;
+  padding: 1%;
+  font-family: "Quintessential";
+  color: #F5EFE6;
 }
 @media (min-width: 768px) {
   .entries__menus__singular h3 {
-    font-size: 35px;
+    font-size: 25px;
   }
 }
 @media (min-width: 1024px) {
   .entries__menus__singular h3 {
-    font-size: 45px;
+    font-size: 35px;
   }
 }
 @media (min-width: 1440px) {
   .entries__menus__singular h3 {
-    font-size: 55px;
+    font-size: 40px;
+  }
+}
+.entries__menus__singular p {
+  font-size: 15px;
+  margin-bottom: 2%;
+  font-family: "Quintessential";
+  color: #F5EFE6;
+}
+@media (min-width: 768px) {
+  .entries__menus__singular p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__menus__singular p {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus__singular p {
+    font-size: 45px;
   }
 }
 .entries__menus__singular__img {
-  width: 150px;
+  width: 90%;
+}
+.entries__menus__singular__img img {
+  border-radius: 5px;
+  min-height: 190px;
+  max-height: 190px;
+}
+@media (min-width: 768px) {
+  .entries__menus__singular__img img {
+    min-height: 356px;
+    max-height: 356px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__menus__singular__img img {
+    min-height: 495px;
+    max-height: 495px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__menus__singular__img img {
+    min-height: 415px;
+    max-height: 415px;
+  }
 }
 .entries__menus__singular__options {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  background-color: #951616;
+  border-radius: 5PX;
+  padding: 2%;
 }
 .entries__menus__singular__options__more, .entries__menus__singular__options__less {
-  width: 60px;
+  width: 40px;
   cursor: pointer;
 }
 @media (min-width: 768px) {
@@ -1572,6 +1656,15 @@
   margin: 0% 5%;
   border-radius: 5px;
   outline: none;
+  background-color: #D4A50D;
+  color: #F5EFE6;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .entries__menus__singular__options__inp {
+    width: 40%;
+    font-size: 20px;
+  }
 }
 .entries__buy {
   width: 20%;
@@ -1604,7 +1697,7 @@
   }
 }
 .entries__popUp {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -1614,10 +1707,10 @@
   transform: translateX(-50%) translateY(-50%);
   width: 80%;
   height: 50%;
-  background-color: #951616;
+  background-color: #191919;
   color: #D4D4D4;
   border-radius: 5px;
-  box-shadow: rgba(25, 25, 25, 0.5490196078) 7px 7px 7px 5px;
+  box-shadow: rgba(212, 212, 212, 0.7450980392) 7px 7px 7px 5px;
   z-index: 10;
 }
 @media (min-width: 1024px) {

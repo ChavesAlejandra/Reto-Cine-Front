@@ -159,7 +159,7 @@ const printMenuData = (data) =>
         const name = menuSing.appendChild(document.createElement('h3'));
         name.textContent = el._name
         const imgDiv = menuSing.appendChild(document.createElement('div'));
-        imgDiv.classList.add('entries__menus_singular__img');
+        imgDiv.classList.add('entries__menus__singular__img');
         const img = imgDiv.appendChild(document.createElement('img'));
         img.src = `../Images/Menus/${el._img}`;
         img.alt = el._img.replace('.jpg', '');
