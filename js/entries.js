@@ -132,9 +132,9 @@ const printData = (data) =>
     const img = document.getElementsByClassName('entries__info__filmImg')[0].children[0];
     img.src = `../Images/Movies/${data._session._film._genres[0]}/${data._session._film._filmImg}`;
     img.alt = data._session._film._filmImg.replace('.jpg', '');
-    document.getElementsByClassName('entries__info__ticket__id')[0].textContent = data._shownId;
-    document.getElementsByClassName('entries__info__ticket__date')[0].textContent = data._session._date.replace('T', ' ');
-    document.getElementsByClassName('entries__info__ticket__room')[0].textContent = data._room;
+    document.getElementsByClassName('entries__info__ticket__id')[0].textContent = `Ticket: ${data._shownId}`;
+    document.getElementsByClassName('entries__info__ticket__date')[0].textContent = `Date: ${data._session._date.replace('T', ' ')}`;
+    document.getElementsByClassName('entries__info__ticket__room')[0].textContent = `Room: ${data._room}`;
     const seatsContainer = document.getElementsByClassName('entries__info__ticket__seats')[0];
     data._seats.forEach(el =>
     {
