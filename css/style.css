@@ -1604,7 +1604,7 @@
   }
 }
 .entries__popUp {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -1617,7 +1617,18 @@
   background-color: #951616;
   color: #D4D4D4;
   border-radius: 5px;
+  box-shadow: rgba(25, 25, 25, 0.5490196078) 7px 7px 7px 5px;
   z-index: 10;
+}
+@media (min-width: 1024px) {
+  .entries__popUp {
+    height: 70%;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__popUp {
+    height: 80%;
+  }
 }
 .entries__popUp__close {
   position: absolute;
@@ -1626,8 +1637,28 @@
   width: 50px;
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .entries__popUp__close {
+    width: 70px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__popUp__close {
+    width: 90px;
+  }
+}
 .entries__popUp h2 {
   font-size: 40px;
+}
+@media (min-width: 1024px) {
+  .entries__popUp h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__popUp h2 {
+    font-size: 60px;
+  }
 }
 .entries__popUp form {
   display: flex;
@@ -1649,10 +1680,30 @@
   width: 25%;
   font-family: "Quintessential";
 }
+@media (min-width: 768px) {
+  .entries__popUp form div label {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__popUp form div label {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__popUp form div label {
+    font-size: 35px;
+  }
+}
 .entries__popUp form div input {
   width: 65%;
   border-radius: 5px;
   font-family: "Quintessential";
+}
+@media (min-width: 1440px) {
+  .entries__popUp form div input {
+    height: 35px;
+  }
 }
 .entries__popUp form button {
   padding: 4% 5%;
@@ -1662,6 +1713,21 @@
   font-family: "Tangerine";
   font-size: 30px;
   cursor: pointer;
+}
+@media (min-width: 768px) {
+  .entries__popUp form button {
+    padding: 2% 3%;
+  }
+}
+@media (min-width: 1024px) {
+  .entries__popUp form button {
+    font-size: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .entries__popUp form button {
+    font-size: 50px;
+  }
 }
 
 .aboutUs {
