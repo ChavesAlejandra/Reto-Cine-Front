@@ -220,7 +220,7 @@ const menuCountUpdate = () =>
     const totalPriceText = document.getElementsByClassName('entries__buy__price')[0];
     let totalPrice = 0;
     ticket._seats.forEach(el => totalPrice += el._price);
-    ticket._menus.forEach(el => totalPrice += el._price);
+    if (ticket._menus != null) { ticket._menus.forEach(el => totalPrice += el._price); }
     menuCount = 0;
     menuSpecificCount.forEach((el, index) =>
     {
