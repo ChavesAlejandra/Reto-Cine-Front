@@ -920,6 +920,7 @@
   grid-area: avail;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
   font-size: 20px;
 }
@@ -976,6 +977,7 @@
 .seats__guide__taken {
   grid-area: taken;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 20px;
@@ -1004,6 +1006,7 @@
 .seats__guide__vip {
   grid-area: vip;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 20px;
@@ -1032,6 +1035,7 @@
 .seats__guide__disabled {
   grid-area: dis;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   font-size: 20px;
