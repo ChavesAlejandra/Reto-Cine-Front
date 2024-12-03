@@ -51,7 +51,13 @@ const postTicketFetchData = (seat) =>
         body: JSON.stringify(postData)
     })
     .then(res => res.json())
-    .then(data => console.log(data));
+    .then(data => console.log(data))
+    .then(x =>
+    {
+        const a = document.createElement('a');
+        a.href = './entries.html';
+        a.click();
+    });
 }
 
 let currentSeats = [];
