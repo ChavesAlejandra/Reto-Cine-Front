@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const fetchData = () =>
 {
-    fetch('http://localhost:5030/ticket/last')
+    fetch('http://34.206.154.49:8080/ticket/last')
     .then(res => res.json())
     .then(data =>
     {
@@ -78,7 +78,7 @@ const fetchData = () =>
         printData(data);
     }).then(x =>
     {
-        fetch('http://localhost:5030/menu')
+        fetch('http://34.206.154.49:8080/menu')
         .then(res => res.json())
         .then(data =>
         {
@@ -102,7 +102,7 @@ const putMenusFetchData = () =>
         }
     });
 
-    fetch(`http://localhost:5030/ticket/id/${ticket._id}/menus`,
+    fetch(`http://34.206.154.49:8080/ticket/id/${ticket._id}/menus`,
     {
         method: 'PUT',
         headers: { "Content-type": "application/json" },
@@ -117,7 +117,7 @@ const putUserFetchData = (firstName, lastName, iban, csv) =>
         const putData = firstName.concat('-').concat(lastName).concat('-').concat(iban).concat('-').concat(csv);
         
     
-        fetch(`http://localhost:5030/ticket/id/${ticket._id}/user`,
+        fetch(`http://34.206.154.49:8080/ticket/id/${ticket._id}/user`,
         {
             method: 'PUT',
             headers: { "Content-type": "application/json" },

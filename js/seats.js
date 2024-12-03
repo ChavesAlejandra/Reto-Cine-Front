@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let session = [];
 const fetchData = () =>
 {
-    fetch(`http://localhost:5030/session/id/${currentSession}`)
+    fetch(`http://34.206.154.49:8080/session/id/${currentSession}`)
     .then(res => res.json())
     .then(data =>
     {
@@ -32,7 +32,7 @@ const fetchData = () =>
 
 const putFetchData = (seat, bool) =>
 {
-    fetch(`http://localhost:5030/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`,
+    fetch(`http://34.206.154.49:8080/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`,
     {
         method: 'PUT'
     })
@@ -44,7 +44,7 @@ const postTicketFetchData = (seat) =>
 {
     const postData = seat;
     console.log(postData);
-    fetch(`http://localhost:5030/ticket/session/${currentSession}`,
+    fetch(`http://34.206.154.49:8080/ticket/session/${currentSession}`,
     {
         method: 'POST',
         headers: { "Content-type": "application/json" },
