@@ -130,7 +130,7 @@ const putUserFetchData = (firstName, lastName, iban, csv) =>
 const printData = (data) =>
 {
     const img = document.getElementsByClassName('entries__info__filmImg')[0].children[0];
-    img.src = `../Images/Movies/${data._session._film._genres[0].substring(0,1).toUpperCase().concat(data._session._film.l._genres[0].substring(1,20))}/${data._session._film._filmImg}`;
+    img.src = `../Images/Movies/${data._session._film._genres[0].substring(0,1).toUpperCase().concat(data._session._film._genres[0].substring(1,20))}/${data._session._film._filmImg}`;
     img.alt = data._session._film._filmImg.replace('.jpg', '');
     document.getElementsByClassName('entries__info__ticket__id')[0].textContent = `Ticket: ${data._shownId}`;
     document.getElementsByClassName('entries__info__ticket__date')[0].textContent = `Date: ${data._session._date.replace('T', ' ')}`;
