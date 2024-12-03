@@ -1,0 +1,407 @@
+
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+@keyframes buyButtonHover
+{
+    0% { background-color: $buttonsBackColor; color: $elementsFontColor; }
+    100% { background-color: $buttonsHoverBackColor; color: $elementsHoverFontColor; }
+}
+
+.entries
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__filmTitle
+    {
+        color: $importantFontColor;
+        padding: 2% 0% 3% 0%;
+        font-size: 40px;
+
+        @media (min-width: 768px) { font-size: 50px; }
+
+        @media (min-width: 1024px) { font-size: 60px; }
+
+        @media (min-width: 1440px) { font-size: 70px; }
+    }
+
+    &__info
+    {
+        flex-direction: row;
+        text-align: center;
+        width: 95%;
+        background-color: $popUpBackColor;
+        padding: 3% 2%;
+        border-radius: 5px;
+
+        @media (min-width: 768px) { width: 80%; }
+
+        &__filmImg 
+        { 
+            width: 30%; 
+            border-radius: 5px;
+            img{border-radius: 5px;}
+        }
+        &__ticket
+        {
+            width: 65%;
+
+            &__id
+            {
+                font-size: 30px;
+                padding-bottom: 2%;
+                color: #D4A50D;
+
+                @media (min-width: 768px) { font-size: 40px; }
+
+                @media (min-width: 1024px) { font-size: 50px; }
+
+                @media (min-width: 1440px) { font-size: 60px; }
+            }
+
+            &__date 
+            { 
+                font-size: 15px;
+                font-family: $paragraphFontFamily;
+
+                @media (min-width: 768px) { font-size: 20px; }
+
+                @media (min-width: 1024px) { font-size: 30px; }
+
+                @media (min-width: 1440px) { font-size: 40px; }
+                
+            }
+
+            &__room
+            {
+                padding: 2% 0% 0% 0%;
+                font-size: 15px;
+                font-family: $paragraphFontFamily;
+
+                @media (min-width: 768px) { font-size: 20px; }
+
+                @media (min-width: 1024px) { font-size: 30px; }
+
+                @media (min-width: 1440px) { font-size: 40px; }
+                    
+            }
+
+            &__seats
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+    
+                &__title
+                {
+                    width: 100%;
+                    font-size: 30px;
+                    padding: 3% 0 1% 0;
+                    color: #D4A50D;
+
+                    @media (min-width: 768px) { font-size: 40px; }
+
+                    @media (min-width: 1024px) { font-size: 50px; }
+
+                    @media (min-width: 1440px) { font-size: 60px; }
+                }
+
+                &__singular
+                {
+                    width: 80%;
+                    margin: 0% 1.5%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+    
+                    p
+                    {
+                        display: flex;
+                        flex-direction: row;                        
+                        padding: 3%;
+                        font-size: 15px;
+                        font-family: $paragraphFontFamily;
+
+                        @media (min-width: 768px) { font-size: 20px; }
+
+                        @media (min-width: 1024px) { font-size: 30px; }
+
+                        @media (min-width: 1440px) { font-size: 40px; }
+                    }
+                }
+            }
+        }
+
+    }
+    &__menus
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        h2
+        {
+            text-align: center;
+            width: 100%;
+            padding: 3% 0% 2% 0%;
+            font-size: 30px;
+            color: $importantFontColor;
+
+            @media (min-width: 768px) { font-size: 40px; }
+
+            @media (min-width: 1024px) { font-size: 50px; }
+
+            @media (min-width: 1440px) { font-size: 60px; }
+        }
+
+        &__singular
+        {
+            width: 45%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3%;
+
+            @media (min-width: 768px) { width: 50%;}
+
+            @media (min-width: 1440px) { width: 33%;}
+
+            h3 
+            {
+                font-size: 15px;
+                padding: 1%;
+                font-family: $paragraphFontFamily;
+                color: $importantFontColor;
+
+                @media (min-width: 768px) { font-size: 25px; }
+
+                @media (min-width: 1024px) { font-size: 35px; }
+
+                @media (min-width: 1440px) { font-size: 40px; }
+            }
+
+            p
+            {
+                font-size: 15px;
+                margin-bottom: 2%;
+                font-family: $paragraphFontFamily;
+                color: $importantFontColor;
+
+                @media (min-width: 768px) { font-size: 25px; }
+
+                @media (min-width: 1024px) { font-size: 35px; }
+
+                @media (min-width: 1440px) { font-size: 45px; }
+            }
+
+            &__img 
+            { 
+                width: 90%;
+
+                img 
+                {
+                    border-radius: 5px;
+                    min-height: 190px; 
+                    max-height: 190px; 
+
+                    @media (min-width: 768px) 
+                    {
+                        min-height: 356px;
+                        max-height: 356px;
+                    }
+
+                    @media (min-width: 1024px) 
+                    {
+                        min-height: 495px;
+                        max-height: 495px;
+                    }
+
+                    @media (min-width: 1440px) 
+                    { 
+                        min-height: 415px;
+                        max-height: 415px;
+                    }
+                }
+            }
+
+            &__options
+            {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                background-color: $popUpBackColor;
+                border-radius: 5PX;
+                padding: 2%;
+
+                &__more, &__less
+                {
+                    width: 40px;
+                    cursor: pointer;
+
+                    @media (min-width: 768px) { width: 70px;}
+
+                    @media (min-width: 1024px) { width: 80px;}
+
+                    @media (min-width: 1440px) { width: 90px;}
+                }
+
+                &__inp
+                {
+                    width: 25%;
+                    margin: 0% 5%;
+                    border-radius: 5px;
+                    outline: none;
+                    background-color: #D4A50D;
+                    color: $importantFontColor;
+                    text-align: center;
+
+                    @media (min-width: 768px) 
+                    { 
+                        width: 40%;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__buy
+    {
+        width: 20%;
+        padding: 2% 3%;
+        background-color: $buttonsBackColor;
+        color: $elementsFontColor;
+        font-size: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover
+        {
+            animation: buyButtonHover 0.6s;
+            background-color: $buttonsHoverBackColor;
+            color: $elementsHoverFontColor;
+        }
+
+        @media (min-width: 768px) 
+        { 
+            width: 25%;
+            font-size: 30px;
+        }
+
+        @media (min-width: 1024px) { font-size: 40px; }
+
+        @media (min-width: 1440px) { font-size: 50px; }
+    }
+    &__popUp
+    {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 80%;
+        height: 50%;
+        background-color: #191919;
+        color: $generalFontColor;
+        border-radius: 5px;
+        box-shadow: #d4d4d4be 7px 7px 7px 5px;
+        z-index: 10;
+
+        @media (min-width: 1024px) { height: 70%; }
+
+        @media (min-width: 1440px) { height: 80%; }
+
+        &__close
+        {
+            position: absolute;
+            top: 2%;
+            right: 3%;
+            width: 50px;
+            cursor: pointer;
+
+            @media (min-width: 1024px) { width: 70px; }
+
+            @media (min-width: 1440px) { width: 90px; }
+        }
+
+        h2 
+        { 
+            font-size: 40px;
+
+            @media (min-width: 1024px) { font-size: 50px; }
+
+            @media (min-width: 1440px) { font-size: 60px; }
+        }
+
+        form
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            div
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 3% 0%;
+                width: 100%;
+
+                label
+                {
+                    width: 25%;
+                    font-family: $paragraphFontFamily;
+
+                    @media (min-width: 768px) { font-size: 20px; }
+
+                    @media (min-width: 1024px) { font-size: 25px; }
+
+                    @media (min-width: 1440px) { font-size: 35px; }
+                }
+                input
+                {
+                    width: 65%;
+                    border-radius: 5px;
+                    font-family: $paragraphFontFamily;
+
+                    @media (min-width: 1440px) { height: 35px; }
+                }
+            }
+            button
+            {
+                padding: 4% 5%;
+                margin-top: 5%;
+                background-color: $buttonsDisabledBackColor;
+                border-radius: 5px;
+                font-family: $textFontFamily;
+                font-size: 30px;
+                cursor: pointer;
+
+                @media (min-width: 768px) { padding: 2% 3%;}
+
+                @media (min-width: 1024px) { font-size: 40px; }
+
+                @media (min-width: 1440px) { font-size: 50px; }
+            }
+        }
+    }
+}

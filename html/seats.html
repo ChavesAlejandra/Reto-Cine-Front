@@ -17,8 +17,8 @@
     <link rel="shortcut icon" href="../Images/logo_page.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/script.js"></script>
-    <script src="../js/category.js"></script>
-    <title>Meowview Palace | Category</title>
+    <script src="../js/seats.js"></script>
+    <title>Meowview Palace | Seats</title>
 </head>
 <body>
     <header class="header">
@@ -73,31 +73,93 @@
             </div>
         </div>
     </header>
-    <article class="films">
-        <section class="films__category">
-            <div class="films__category__left"><img src="../Images/Icons/arrow_blanco.png" alt="arrow_left"></div>
-            <h1 class="films__category__title">Animation</h1>
-            <div class="films__category__right"><img src="../Images/Icons/arrow_blanco.png" alt="arrow_right"></div>
-        </section>
-        <section class="films__container">
-            <div class="films__container__popUp">
-                <div class="films__container__popUp__close"><img src="../Images/Icons/close_blanco.png" alt="close"></div>
-                <h2 class="films__container__popUp__title"></h2>
-                <div class="films__container__popUp__info">
-                    <p class="films__container__popUp__info__director"></p>
-                    <p class="films__container__popUp__info__duration">Duration: <span class="val"></span>minutes</p>
-                    <p class="films__container__popUp__info__premiereYear">Premiere Year: <span class="val"></span></p>
-                    <p class="films__container__popUp__info__ageRestriction">Minimum Age: <span class="val"></span>years</p>
+    <article>
+        <section class="seats">
+            <div class="seats__route">
+                <p><a href="home.html">Meowview Palace</a> / <a href="category.html">Categories</a></p>
+            </div>
+            <h1 class="seats__title">Choose your seats</h1>
+            <div class="seats__container">
+                <div class="seats__container__stage">
+                    <h1>Stage</h1>
                 </div>
-                <div class="films__container__popUp__img"><img src="" alt=""></div>
-                <p class="films__container__popUp__description"></p>
-                <div class="films__container__popUp__selectSession">
-                    <ul class="films__container__popUp__selectSession__container">
-                        <li class="films__container__popUp__selectSession__container__opt default selected">Select Session</li>
-                    </ul>
-                    <button class="films__container__popUp__selectSession__button">Select Session</button>
+                <div class="seats__container__seats">
+                    <div class="seats__container__seats__left">
+                        <p>A</p> <p>B</p> <p>C</p> <p>D</p> <p>E</p> <p>F</p> <p>G</p> <p>H</p> <p>I</p>
+                    </div>
+                    <div class="seats__container__seats__positions"></div>
+                    <div class="seats__container__seats__right"> 
+                        <p>A</p> <p>B</p> <p>C</p> <p>D</p> <p>E</p> <p>F</p> <p>G</p> <p>H</p> <p>I</p>
+                    </div>
+                    <div class="seats__container__seats__num">
+                        <span>1</span> <span>2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span> <span>7</span> <span>8</span> <span>9</span> <span>10</span> <span>11</span>
+                    </div>
                 </div>
-                <button class="films__container__popUp__buyEntries" disabled>Buy Entries</button>
+            </div>
+            <div class="seats__guide">
+                <div class="seats__guide__available">
+                    <div class="seats__guide__img">
+                        <img src="../Images/Icons/seat_blanco.png" alt="Seat Available">
+                    </div>
+                    <h1>Available</h1>                
+                </div>
+                <div class="seats__guide__select">
+                    <div class="seats__guide__img">
+                        <img src="../Images/Icons/seat_select.png" alt="Seat Select">
+                    </div>
+                    <h1>Select</h1>
+                </div>
+                <div class="seats__guide__taken">
+                    <div class="seats__guide__img">
+                        <img src="../Images/Icons/seat_taken.png" alt="Seat Taken">
+                    </div>
+                    <h1>Taken</h1>
+                </div>
+                <div class="seats__guide__vip">
+                    <div class="seats__guide__img">
+                        <img src="../Images/Icons/seat_VIP.png" alt="Seat VIP">
+                    </div>
+                    <h1>VIP</h1>
+                </div>
+                <div class="seats__guide__disabled">
+                    <div class="seats__guide__img">
+                        <img src="../Images/Icons/seat_disabled.png" alt="Seat Disabled">
+                    </div>
+                    <h1>Disabled</h1>
+                </div>
+            </div>
+            <div class="seats__guidePrice">
+                <div class="seats__guidePrice__normal">
+                    <div class="seats__guidePrice__img">
+                        <img src="../Images/Icons/seat_blanco.png" alt="Seat Normal">
+                    </div>
+                    <h1>Normal:</h1>
+                    <h3>7.50€</h3>      
+                </div>
+                <div class="seats__guidePrice__vip">
+                    <div class="seats__guidePrice__img">
+                        <img src="../Images/Icons/seat_VIP.png" alt="Seat VIP">
+                    </div>
+                    <h1>VIP:</h1>
+                    <h3>7.00€</h3>  
+                </div>
+                <div class="seats__guidePrice__disabled">
+                    <div class="seats__guidePrice__img">
+                        <img src="../Images/Icons/seat_disabled.png" alt="Seat Disabled">
+                    </div>
+                    <h1>Disabled:</h1>
+                    <h3>9.00€</h3>
+                </div>
+            </div>
+            <button class="seats__buy">
+                Buy Seats
+                <br>
+                <span class="seats__buy__price">0€</span>
+            </button>
+            <div class="seats__entryInfo">
+                <h1>How to use your tickets?</h1>
+                <p class="seats__entryInfo__qr">Show your QR</p>
+                <p class="seats__entryInfo__info">Access the venue directly by showing the QR code on your printed ticket or on your smartphone.</p>
             </div>
         </section>
     </article>

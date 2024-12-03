@@ -7,36 +7,14 @@
 
 @use '../sass/layout/home.scss' as *;
 @use '../sass/layout/category.scss' as *;
+@use '../sass/layout/seats.scss' as *;
+@use '../sass/layout/entries.scss' as *;
+@use '../sass/layout/aboutUs.scss' as *;
+@use '../sass/layout/legalNotice.scss' as *;
+@use '../sass/layout/premiumRoom.scss' as *;
+@use '../sass/layout/terms.scss' as *;
 
 img { width: 100%; }
-
-.header
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 1% 0%;
-    background-color: $headerFooterBackColor;
-    color: $generalFontColor;
-    font-size: $normalFontSizeMobile;
-
-    &__logo { width: 200px; }
-}
-
-.footer
-{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    padding: 1% 0%;
-    background-color: $headerFooterBackColor;
-    color: $generalFontColor;
-    font-size: $normalFontSizeMobile;
-
-    &__logo { width: 100px; }
-}
 
 article, section
 {
@@ -49,4 +27,267 @@ article, section
     background-color: $bodyBackColor;
     color: $generalFontColor;
     font-size: $normalFontSizeMobile;
+}
+
+p { font-family: $textFontFamily; }
+
+h1, h2, h3, h4, h5, h6 { font-family: $titleFontFamily; }
+
+.header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0%;
+    background-color: $headerFooterBackColor;
+    color: $generalFontColor;
+    font-family: $textFontFamily;
+    font-size: $normalFontSizeMobile;
+
+    &__logo 
+    {
+        width: 200px;
+        @media (min-width: 1024px) { width: 250px; }
+        @media (min-width: 1440px) { width: 300px; }
+    }
+
+    &__principalMenu
+    {
+       display: flex;
+       justify-content: center;
+       position: relative;
+       width: 27%;
+       @media (min-width: 1024px) { display: none;}
+
+       &__menu{width: 75px;}
+
+       &__list
+       {
+        visibility: hidden;
+        flex-direction: column;
+        position: absolute;
+        width: 130px;
+        top: 95%;
+        background-color: $menusBackColor;
+
+        &__categories
+        {
+            visibility: hidden;
+
+            color: $importantFontColor;
+
+            &__title 
+            { 
+                cursor: pointer; 
+                font-size: 35px;
+            }
+
+            &__list
+            {
+                display: flex;
+                flex-direction: column;
+                font-size: 25px;
+
+                li a
+                {
+                    color: $importantFontColor;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__info
+        {
+            visibility: hidden;
+            color: $importantFontColor;
+
+            &__title 
+            { 
+                cursor: pointer; 
+                font-size: 35px;
+            }
+
+            &__list
+            {
+                display: flex;
+                flex-direction: column;
+                font-size: 25px;
+
+                li a
+                {
+                    color: $importantFontColor;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+       }
+    }
+
+    &__menu
+    {
+        display: none;
+        position: relative;
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+        @media (min-width: 1024px) { display: flex;}
+
+        &__categories
+        {
+            visibility: hidden;
+            font-size: 55px;
+            color: $importantFontColor;
+
+            @media (min-width: 1024px) { visibility: visible; }
+
+            &__title
+            {
+                cursor: pointer;
+                &:hover{color: $buttonsHoverBackColor;}
+            }
+
+            &__list
+            {
+                visibility: hidden;
+                position: absolute;
+                top: 110%;
+                flex-direction: column;
+                background-color: $menusBackColor;
+                font-size: 40px;
+
+            li a
+            {
+                color: $importantFontColor;
+                cursor: pointer;
+                &:hover
+                { 
+                    color: $liHoverFontColor;
+                    background-color: $menusHoverBackColor; 
+                }
+
+            }
+                
+                @media (min-width: 1440px) { font-size: 50px; }
+            }
+
+            @media (min-width: 1440px) { font-size: 65px; }
+        }
+
+        &__info
+        {
+            visibility: hidden;
+            font-size: 55px;
+            color: $importantFontColor;
+
+            @media (min-width: 1024px) { visibility: visible; }
+
+            &__title
+            {
+                cursor: pointer;
+                &:hover{color: $buttonsHoverBackColor;}
+            }
+
+            &__list
+            {
+                visibility: hidden;
+                position: absolute;
+                top: 110%;
+                flex-direction: column;
+                background-color: $menusBackColor;
+                font-size: 40px;
+
+            li a
+            {
+                color: $importantFontColor;
+                cursor: pointer;
+                &:hover
+                { 
+                    color: $liHoverFontColor;
+                    background-color: $menusHoverBackColor; 
+                }
+
+            }
+
+                @media (min-width: 1440px) { font-size: 50px; }
+            }
+            @media (min-width: 1440px) { font-size: 65px; }
+        }
+    }
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1% 0%;
+    background-color: $headerFooterBackColor;
+    color: $generalFontColor;
+    font-family: $textFontFamily;
+    font-size: $normalFontSizeMobile;
+
+    a{color: $generalFontColor;}
+
+    &__logo 
+    { 
+        width: 100px;
+        
+        @media (min-width: 1440px) { width: 150px; }
+    }
+
+    &__links
+    {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2%;
+        font-size: 30px;
+        width: 50%;
+
+        @media (min-width: 768px) 
+        { 
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 35px;
+            padding: 1%;
+            width: 60%;
+        }
+
+        @media (min-width: 1024px) { font-size: 40px; }
+
+        @media (min-width: 1440px) { font-size: 50px; }
+
+        &__others
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2%;
+
+            @media (min-width: 768px) 
+            {
+                width: 40%;
+                padding: 1%; 
+            }
+        }
+
+        &__imp
+        {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+            
+            @media (min-width: 768px) 
+            {
+                width: 60%;
+                padding: 1%; 
+            }
+        }
+    }
 }

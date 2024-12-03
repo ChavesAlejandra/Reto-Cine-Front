@@ -1,0 +1,568 @@
+
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+@keyframes buyHover
+{
+    0% { background-color: $buttonsBackColor; color: $elementsFontColor; }
+    100% { background-color: $buttonsHoverBackColor; color: $elementsHoverFontColor; }
+}
+
+.seats
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__route 
+    {
+        width: 100%;
+        padding: 2% 0 2% 2%;
+        font-weight: bolder;
+        font-size: 30px;
+
+        @media (min-width: 768px) { font-size: 40px; }
+
+        @media (min-width: 1024px) { font-size: 50px; }
+
+        @media (min-width: 1440px) { font-size: 60px; }
+
+        a 
+        {
+            color: #951616;
+            font-family: $titleFontFamily;
+            font-weight: normal;
+            font-size: 20px;
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) { font-size: 50px; }
+        }
+
+    }
+
+    &__title
+    {
+        font-size: 40px;
+        margin: 2% 0% 3% 0%;
+        font-family: $titleFontFamily;
+
+        @media (min-width: 768px) { font-size: 50px; }
+
+        @media (min-width: 1024px) { font-size: 60px; }
+
+        @media (min-width: 1440px) { font-size: 70px; }
+    }
+
+    &__container
+    {
+        width: 95%;
+        background-color: $divsBackColor;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @media (min-width: 1024px) { width: 85%; }
+
+        @media (min-width: 1440px) { width: 75%; }
+
+        &__stage
+        {
+            width: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2%;
+            background-color: #D4D4D4;
+            color: #191919;
+            font-family: $titleFontFamily;
+            font-size: 40px;
+
+            @media (min-width: 1024px) { font-size: 50px; }
+
+            @media (min-width: 1440px) { font-size: 60px; }
+        }
+
+        &__seats
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 3%;
+            font-size: 33px;
+
+            @media (min-width: 768px) { font-size: 60px; }         
+
+            @media (min-width: 1440px) { font-size: 90px; }
+
+            @media (min-width: 1440px) { font-size: 90px; }
+
+            &__left, &__right
+            {
+                width: 10%;
+                cursor: default;
+            }
+
+            &__positions
+            {
+                width: 80%;
+                padding: 0 2%;
+                display: grid;
+                grid-template-areas: 
+                ". . . a4 a5 . a7 a8 . . ."
+                "b1 b2 . b4 b5 b6 b7 b8 . b10 b11"
+                "c1 c2 . c4 c5 c6 c7 c8 . c10 c11"
+                "d1 d2 . d4 d5 d6 d7 d8 . d10 d11"
+                "e1 e2 . e4 e5 e6 e7 e8 . e10 e11"
+                "f1 f2 . f4 f5 f6 f7 f8 . f10 f11"
+                "g1 g2 . g4 g5 g6 g7 g8 . g10 g11"
+                "h1 h2 . h4 h5 h6 h7 h8 . h10 h11"
+                "i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11";
+
+                div { cursor: pointer; }
+                
+                #A4{grid-area: a4;}
+                #A5{grid-area: a5;}
+                #A7{grid-area: a7;}
+                #A8{grid-area: a8;}
+
+                #B1{grid-area: b1;}
+                #B2{grid-area: b2;}
+                #B4{grid-area: b4;}
+                #B5{grid-area: b5;}
+                #B6{grid-area: b6;}
+                #B7{grid-area: b7;}
+                #B8{grid-area: b8;}
+                #B10{grid-area: b10;}
+                #B11{grid-area: b11}
+
+                #C1{grid-area: c1;}
+                #C2{grid-area: c2;}
+                #C4{grid-area: c4;}
+                #C5{grid-area: c5;}
+                #C6{grid-area: c6;}
+                #C7{grid-area: c7;}
+                #C8{grid-area: c8;}
+                #C10{grid-area: c10;}
+                #C11{grid-area: c11}
+
+                #D1{grid-area: d1;}
+                #D2{grid-area: d2;}
+                #D4{grid-area: d4;}
+                #D5{grid-area: d5;}
+                #D6{grid-area: d6;}
+                #D7{grid-area: d7;}
+                #D8{grid-area: d8;}
+                #D10{grid-area: d10;}
+                #D11{grid-area: d11}
+
+                #E1{grid-area: e1;}
+                #E2{grid-area: e2;}
+                #E10{grid-area: e10;}
+                #E11{grid-area: e11}
+
+                #F1{grid-area: f1;}
+                #F2{grid-area: f2;}
+                #F4{grid-area: f4;}
+                #F5{grid-area: f5;}
+                #F6{grid-area: f6;}
+                #F7{grid-area: f7;}
+                #F8{grid-area: f8;}
+                #F10{grid-area: f10;}
+                #F11{grid-area: f11}
+
+                #G1{grid-area: g1;}
+                #G2{grid-area: g2;}
+                #G4{grid-area: g4;}
+                #G5{grid-area: g5;}
+                #G6{grid-area: g6;}
+                #G7{grid-area: g7;}
+                #G8{grid-area: g8;}
+                #G10{grid-area: g10;}
+                #G11{grid-area: g11}
+
+                #H1{grid-area: h1;}
+                #H2{grid-area: h2;}
+                #H4{grid-area: h4;}
+                #H5{grid-area: h5;}
+                #H6{grid-area: h6;}
+                #H7{grid-area: h7;}
+                #H8{grid-area: h8;}
+                #H10{grid-area: h10;}
+                #H11{grid-area: h11}
+
+                #I1{grid-area: i1;}
+                #I2{grid-area: i2;}
+                #I3{grid-area: i3;}
+                #I4{grid-area: i4;}
+                #I5{grid-area: i5;}
+                #I6{grid-area: i6;}
+                #I7{grid-area: i7;}
+                #I8{grid-area: i8;}
+                #I9{grid-area: i9;}
+                #I10{grid-area: i10;}
+                #I11{grid-area: i11}
+
+
+                @media (min-width: 1024px) { width: 60%; }
+
+                @media (min-width: 1440px) { width: 70%; }
+            }
+
+            &__num
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                width: 77%;
+                font-family: $titleFontFamily;
+                cursor: default;
+
+                @media (min-width: 1024px) { width: 55%; }
+
+                @media (min-width: 1440px) { width: 65%; }
+            }
+        }
+    }
+
+    &__guide
+    {
+        background-color: $divsBackColor;
+        border-radius: 5px;
+        margin-top: 5%;
+        padding: 2%;
+        width: 75%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-areas: 
+        "avail select taken"
+        "vip . dis";
+
+        &__available
+        {
+            grid-area: avail;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            font-size: 20px;
+
+            div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
+        }
+
+        &__select
+        {
+            grid-area: select;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 20px;
+
+            div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
+        }
+
+        &__taken
+        {
+            grid-area: taken;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            font-size: 20px;
+
+            div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
+        }
+
+        &__vip
+        {
+            grid-area: vip;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            font-size: 20px;
+
+            div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
+        }
+
+        &__disabled
+        {
+            grid-area: dis;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            font-size: 20px;
+
+            div{width: 35%;}
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) 
+            { 
+                font-size: 50px;
+                div{width: 25%;}
+            }
+        }
+    }
+
+    &__guidePrice
+    {
+        background-color: $divsBackColor;
+        border-radius: 5px;
+        margin-top: 5%;
+        padding: 2%;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 1024px) 
+        { 
+            flex-direction: row;
+            width: 75%;
+        }
+
+        &__normal
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3 { font-size: 15px; }
+            div{width: 25%;}
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
+            }
+        }
+
+        &__vip
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3 { font-size: 15px; }
+            div{width: 25%;}
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
+            }
+        }
+
+        &__disabled
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row;
+            h1{ font-size: 20px; }
+            h3 { font-size: 15px; }
+            div{width: 25%;}
+            
+            @media (min-width: 768px) 
+            {
+                h1{ font-size: 30px; }
+                h3{font-size: 25px;} 
+            }
+
+            @media (min-width: 1024px) 
+            { 
+                h1{ font-size: 35px; }
+                h3{font-size: 30px;} 
+            }
+
+            @media (min-width: 1440px) 
+            { 
+                h1{ font-size: 50px; }
+                h3{font-size: 45px;}
+            }
+        }
+    }
+
+    &__buy
+    {
+        width: 35%;
+        padding: 3% 5%;
+        margin: 5% 0% 0% 0%;
+        background-color: $buttonsDisabledBackColor;
+        color: $elementsHoverFontColor;
+        border-radius: 5px;
+        font-family: $textFontFamily;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+
+        @media (min-width: 768px)
+        {
+            width: 30%;
+            font-size: 40px;
+        }
+        @media (min-width: 1024px) { width: 25%; }
+        @media (min-width: 1440px)
+        {
+            padding: 2% 0%;
+            font-size: 55px;
+        }
+        @media (min-width: 1650px) { width: 18%; }
+    }
+
+    &__buyEnabled
+    {
+        width: 35%;
+        padding: 3% 5%;
+        margin: 5% 0% 0% 0%;
+        border-radius: 5px;
+        background-color: $buttonsBackColor;
+        color: $elementsFontColor;
+        font-family: $textFontFamily;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover
+        {
+            animation: buyHover 0.8s;
+            background-color: $buttonsHoverBackColor;
+            color: $elementsHoverFontColor;
+        }
+
+        @media (min-width: 768px)
+        {
+            width: 30%;
+            font-size: 40px;
+        }
+        @media (min-width: 1024px) { width: 25%; }
+        @media (min-width: 1440px)
+        {
+            padding: 2% 0%;
+            font-size: 55px;
+        }
+        @media (min-width: 1650px) { width: 18%; }
+    }
+
+    &__entryInfo
+    {
+        width: 75%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1
+        {
+            font-size: 35px;
+            color: #D4D4D4;
+
+            @media (min-width: 768px) { font-size: 50px; }
+
+            @media (min-width: 1024px) { font-size: 60px; }
+    
+            @media (min-width: 1440px) { font-size: 70px; }
+        }
+
+        &__info
+        {
+            font-size: 20px;
+            color: #191919;
+
+            @media (min-width: 768px) { font-size: 30px; }
+
+            @media (min-width: 1024px) { font-size: 40px; }
+
+            @media (min-width: 1440px) { font-size: 50px; }
+        }
+
+        &__qr
+        {
+            font-size: 25px;
+            color: #951616;
+
+            @media (min-width: 768px) { font-size: 35px; }
+
+            @media (min-width: 1024px) { font-size: 45px; }
+
+            @media (min-width: 1440px) { font-size: 55px; }
+        }      
+    }
+}

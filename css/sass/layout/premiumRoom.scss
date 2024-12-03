@@ -1,0 +1,75 @@
+@use '../base/reset' as *;
+@use '../base/vars' as *;
+@use '../base/mixins' as *;
+
+
+.premium
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3%;
+    &__title
+    {
+        margin: 2% 0%;
+        font-size: 30px;
+        color: #951616;
+
+        @media (min-width: 768px) { font-size: 60px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 70px;
+            padding: 0% 10%;
+        }
+        @media (min-width: 1440px) { font-size: 100px; }
+    }
+    h2
+    {
+        font-family: $paragraphFontFamily;
+        font-size: 20px;
+        color: $h2FontColor;
+        width: 100%;
+        padding: 2%;
+        @media (min-width: 768px) { font-size: 30px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 40px;
+        }
+        @media (min-width: 1440px) { font-size: 40px; }
+    }
+    h3
+    {
+        font-family: $paragraphFontFamily;
+        font-size: $normalFontSizeMobile;
+        color: #951616;
+        width: 100%;
+        padding: 1%;
+        @media (min-width: 768px) { font-size: 25px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 30px;
+            margin: 1%;
+            padding: 1%;
+            
+        }
+        @media (min-width: 1440px) { font-size: 35px; }
+    }
+    p 
+    {
+        font-family: $paragraphFontFamily;
+        font-size: $normalFontSizeMobile;
+        color: $importantFontColor;
+        line-height: 1.3;
+
+        @media (min-width: 768px) { font-size: 25px; }
+        @media (min-width: 1024px)
+        {
+            font-size: 30px;
+            padding: 1%;
+            line-height: 1;
+            
+        }
+        @media (min-width: 1440px) { font-size: 35px; }
+    }
+}
