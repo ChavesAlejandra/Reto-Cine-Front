@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             localStorage.setItem('seats', currentSeats);
             postTicketFetchData(currentSeats);
-            const a = document.createElement('a');
-            a.href = './entries.html';
-            a.click();
         }
     });
     fetchData();
