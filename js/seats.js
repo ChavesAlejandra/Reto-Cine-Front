@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     seatsBuy.addEventListener('click', () => {
         if (currentSeats.length > 0)
         {
-            localStorage.setItem('seats', currentSeats);
+            localStorage.setItem('seats', JSON.stringify(currentSeats));
             postTicketFetchData(currentSeats);
         }
     });
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let session = [];
 const fetchData = () =>
 {
-    fetch(`http://localhost:5030/session/id/${currentSession}`)
+    fetch(`http://localhost:80/session/id/${currentSession}`)
     .then(res => res.json())
     .then(data =>
     {
@@ -29,7 +29,7 @@ const fetchData = () =>
 
 const putFetchData = (seat, bool) =>
 {
-    fetch(`http://localhost:5030/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`,
+    fetch(`http://localhost:80/session/id/${currentSession}/seat/${seat._id}/occupied/${bool}`,
     {
         method: 'PUT'
     })
@@ -41,14 +41,18 @@ const postTicketFetchData = (seat) =>
 {
     const postData = seat;
     console.log(postData);
-    fetch(`http://localhost:5030/ticket/session/${currentSession}`,
+    fetch(`http://localhost:80/ticket/session/${currentSession}`,
     {
         method: 'POST',
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(postData)
     })
     .then(res => res.json())
-    .then(data => console.log(data))
+    .then(data =>
+    {
+        console.log(data);
+        localStorage.setItem('ticket', data._id);
+    })
     .then(x =>
     {
         const a = document.createElement('a');

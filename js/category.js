@@ -58,7 +58,7 @@ let sessions = [];
 /* FETCH */
 const fetchData = () =>
 {
-    fetch(`http://localhost:5030/film/genre/${currentGenre}`)
+    fetch(`http://localhost:80/film/genre/${currentGenre}`)
     .then(res => res.json())
     .then(data =>
     {
@@ -66,7 +66,7 @@ const fetchData = () =>
         console.log(data);
     }).then(x =>
     {
-        fetch('http://localhost:5030/session')
+        fetch('http://localhost:80/session')
         .then(res => res.json())
         .then(data => {
             sessions = data;
