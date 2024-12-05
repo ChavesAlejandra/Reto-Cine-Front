@@ -2267,6 +2267,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   position: relative;
   width: 27%;
+  z-index: 10;
 }
 @media (min-width: 1024px) {
   .header__principalMenu {
@@ -2325,6 +2326,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  z-index: 10;
 }
 @media (min-width: 1024px) {
   .header__menu {
