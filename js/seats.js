@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     seatsBuy.addEventListener('click', () => {
         if (currentSeats.length > 0)
         {
-            localStorage.setItem('seats', JSON.stringify(currentSeats));
+            localStorage.setItem('seats', currentSeats.map(el => el._id));
             postTicketFetchData(currentSeats);
         }
     });
@@ -61,7 +61,16 @@ const postTicketFetchData = (seat) =>
     });
 }
 
-let currentSeats = [];
+let currentSeats = localStorage.getItem('seats').length > 0 ? localStorage.getItem('seats').split(',').map((el, index) =>
+    {
+        fetch(`http://localhost:80/session/id/${currentSession}`)
+        .then(res => res.json())
+        .then(data =>
+        {
+            console.log(data);
+            currentSeats[index] = data[0]._seats.filter(se => se._id === el)[0];
+        });
+    }) : [];
 const printData = (data) =>
 {
     const seatsContainer = document.getElementsByClassName('seats__container__seats__positions')[0];
@@ -71,8 +80,25 @@ const printData = (data) =>
         const imgDiv = seatsContainer.appendChild(document.createElement('div'));
         imgDiv.id = el._id;
         const img = imgDiv.appendChild(document.createElement('img'));
-        img.src = `../Images/Icons/${el._img}`;
-        img.alt = el._img.replace('.png', '');
+        if (currentSeats.filter(cs => cs._id === el._id)>0)
+        {
+            img.src = `../Images/Icons/seat_select.png`;
+            img.alt = 'seat_select';
+        }
+        else
+        {
+            if (el._occupied)
+            {
+                img.src = `../Images/Icons/seat_taken.png`;
+                img.alt = 'seat_taken';
+            }
+            else 
+            {
+                img.src = `../Images/Icons/${el._img}`;
+                img.alt = el._img.replace('.png', '');
+            }
+        }
+        
 
         imgDiv.addEventListener('click', () => {
             if (!el._occupied && !currentSeats.filter(cs => cs._id === el._id).length>0)

@@ -154,10 +154,17 @@ const printData = (data) =>
 
             sessions.filter(se => se._film._id === el._id).forEach(se =>
             {
+                const seDate = new Date(se._date);
+                const seDateDay = seDate.getDate().toString().length < 2 ? '0'.concat(seDate.getDate().toString()) : seDate.getDate();
+                const seDateMonth = (seDate.getMonth()+1).toString().length < 2 ? '0'.concat((seDate.getMonth()+1).toString()) : (seDate.getMonth()+1);
+                const seDateYear = seDate.getFullYear().toString().length < 2 ? '0'.concat(seDate.getFullYear().toString()) : seDate.getFullYear();
+                const seDateHour = seDate.getHours().toString().length < 2 ? '0'.concat(seDate.getHours().toString()) : seDate.getHours();
+                const seDateMin = seDate.getMinutes().toString().length < 2 ? '0'.concat(seDate.getMinutes().toString()) : seDate.getMinutes();
+
                 const currentSession = sessionContainer.appendChild(document.createElement('li'));
                 currentSession.classList.add('films__container__popUp__selectSession__container__opt');
                 currentSession.value = se._id;
-                currentSession.textContent = se._date.replace('T', ' ').substring(0, 16);
+                currentSession.textContent = `${seDateDay}-${seDateMonth}-${seDateYear} ${seDateHour}:${seDateMin}`;
 
                 currentSession.addEventListener('click', (ev) => {
                     Array.from(sessionContainer.children).filter(ch => ch.classList.contains('selected')).map(ch => ch.classList.remove('selected'));
@@ -180,16 +187,8 @@ const printData = (data) =>
                         localStorage.setItem('session', se._id);
                     }
                 });
-                const seSplitDate = se._date.split('T')[0];
-                const seSplitTime = se._date.split('T')[1];
-                const seDate = new Date(seSplitDate.split('-')[0], seSplitDate.split('-')[1]-1, seSplitDate.split('-')[2], seSplitTime.split(':')[0], seSplitTime.split(':')[1], seSplitTime.split(':')[2]);
                 
-                if (seDate < date || se._full)
-                {
-                    currentSession.style.backgroundColor = '#AFAFAF';
-                    currentSession.style.cursor = 'not-allowed';
-                    currentSession.style.pointerEvents = 'none';
-                }
+                if (seDate < date || se._full) { currentSession.style.display = 'none'; }
             });
 
             popUp.getElementsByClassName('films__container__popUp__close')[0].addEventListener('click', () => {
