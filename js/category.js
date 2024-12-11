@@ -96,7 +96,7 @@ const printData = (data) =>
 {
     const form = document.getElementById('paymentForm');
     const formInp = Array.from(form.getElementsByTagName('input'));
-    const submitForm = form.getElementsByTagName('buttonComment')[0];
+    const submitForm = form.getElementsByTagName('button')[0];
     const popUp = document.getElementsByClassName('films__container__popUp')[0];
     const filmsContainer = document.getElementsByClassName('films__container')[0];
     const sessionContainer = document.getElementsByClassName('films__container__popUp__selectSession__container')[0];
@@ -191,6 +191,8 @@ const printData = (data) =>
                     {
                         putUserFetchData(formInp[0].value, formInp[1].value, formInp[2].value);
                         alert('Your comment has been succesfully completed');
+                        const a = document.createElement('a');
+                        a.href = './home.html';
                         a.click();
                     }
                 });
