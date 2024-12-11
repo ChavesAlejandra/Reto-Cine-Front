@@ -52,6 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData();
 })
 
+
+const putUserFetchData = (name, comentario, stars) =>
+    {
+        const putData = name.concat('-').concat(comentario).concat('-').concat(iban);
+        
+    
+        fetch(`http://localhost:80/film/${film}/commentarios`,
+        {
+            method: 'PUT',
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(putData)
+        })
+        .then(res => res.json())
+        .then(data => console.log(data));
+    }
+
 let categoryFilms = [];
 let sessions = [];
 
@@ -78,6 +94,9 @@ const fetchData = () =>
 
 const printData = (data) =>
 {
+    const form = document.getElementById('paymentForm');
+    const formInp = Array.from(form.getElementsByTagName('input'));
+    const submitForm = form.getElementsByTagName('buttonComment')[0];
     const popUp = document.getElementsByClassName('films__container__popUp')[0];
     const filmsContainer = document.getElementsByClassName('films__container')[0];
     const sessionContainer = document.getElementsByClassName('films__container__popUp__selectSession__container')[0];
@@ -146,6 +165,35 @@ const printData = (data) =>
 
                 localStorage.setItem('session', ev.target.value);
             });
+
+            formInp.forEach(el =>
+                {
+                    el.addEventListener('change', () => {
+                        let requiredFilled = false;
+                
+                        if (formInp[0].value.length < 1 || formInp[1].value.length < 10 || formInp[2].value.length < 1) { requiredFilled = false; }
+                        else { requiredFilled = true; }
+                
+                        if (requiredFilled)
+                        {
+                            submitForm.disabled = false;
+                            submitForm.style.backgroundColor = '#D4A50D';
+                        }
+                        else
+                        {
+                            submitForm.disabled = false;
+                            submitForm.style.backgroundColor = '#AFAFAF';
+                        }
+                        });
+                    });
+                submitForm.addEventListener('click', () => {
+                    if (!submitForm.disabled)
+                    {
+                        putUserFetchData(formInp[0].value, formInp[1].value, formInp[2].value);
+                        alert('Your comment has been succesfully completed');
+                        a.click();
+                    }
+                });
 
             popUp.getElementsByClassName('films__container__popUp__selectSession__button')[0].addEventListener('click', (ev) => {
                 ev.target.style.borderRadius = '0 0 5px 5px';
